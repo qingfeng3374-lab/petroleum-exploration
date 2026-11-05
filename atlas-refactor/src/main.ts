@@ -1,0 +1,11 @@
+import {mount} from 'svelte';
+import App from './App.svelte';
+import './styles.css';
+import './preferences.css';
+import './atlas-experience.css';
+import './actions.css';
+import './workspace.css';
+import './case-content.css';
+import './field.css';
+import './cinematic.css';
+mount(App,{target:document.getElementById('app')!});

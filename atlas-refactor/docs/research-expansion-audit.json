@@ -1,0 +1,1816 @@
+{
+  "version": "4.0.0",
+  "totalCases": 102,
+  "added": 39,
+  "coveredScenes": 61,
+  "uniqueReferences": [
+    "https://www.slb.com/-/media/files/oilfield-review/2-casing-corr-2-english",
+    "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+    "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-production-logging",
+    "https://www.slb.com/resource-library/technical-paper/wi/spe-166531",
+    "https://scikit-learn.org/stable/modules/neighbors.html",
+    "https://www.eia.gov/energyexplained/oil-and-petroleum-products/refining-crude-oil-the-refining-process.php",
+    "https://www.energy.gov/cmei/femp/water-efficient-technology-opportunity-side-stream-filtration-cooling-towers",
+    "https://glossary.slb.com/en/terms/v/variable-density_log",
+    "https://glossary.slb.com/en/terms/s/spacer_fluid",
+    "https://glossary.slb.com/en/terms/t/thickening_time",
+    "https://www.usgs.gov/publications/geochemical-and-mineralogical-maps-interpretation-soils-conterminous-united-states",
+    "https://itl.nist.gov/div898/software/dataplot/refman2/auxillar/mad.htm",
+    "https://www.usgs.gov/programs/national-cooperative-geologic-mapping-program/science/national-geologic-map-database-0",
+    "https://www.usgs.gov/labs/spectroscopy-lab/usgs-spectral-library",
+    "https://www.energy.gov/hgeo/enhanced-oil-recovery",
+    "https://glossary.slb.com/en/Terms/m/minimum_miscibility_pressure.aspx",
+    "https://www.bc-er.ca/files/operations-documentation/Reservoir-Management/Well-Testing/Diagnostic-Fracture-Injection-Test-DFIT-Recommendations_revised-20Jul2023.pdf",
+    "https://glossary.slb.com/en/terms/p/polymer",
+    "https://glossary.slb.com/en/terms/f/flow_profile",
+    "https://www.slb.com/videos/bluepack-rh",
+    "https://glossary.slb.com/en/terms/s/sieve_analysis",
+    "https://www.slb.com/products-and-services/innovating-in-oil-and-gas/completions/well-completions/perforating",
+    "https://docs.scipy.org/doc/scipy/tutorial/fft.html",
+    "https://www.slb.com/resource-library/technical-paper/pe/spe-143997",
+    "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-mud-logging",
+    "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-log-interpretation",
+    "https://glossary.slb.com/en/terms/w/water-cut_meter",
+    "https://glossary.slb.com/en/terms/n/nmr",
+    "https://www.slb.com/products-and-services/innovating-in-oil-and-gas/reservoir-characterization/seismic/subsurface-imaging/seismic-reservoir-characterization/seismic-inversion/avo-seismic-inversion",
+    "https://www.slb.com/products-and-services/delivering-digital-at-scale/software/petrel-subsurface-software/petrel/petrel-geophysics/petrel-seismic-interpretation",
+    "https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression",
+    "https://glossary.slb.com/terms/n/normal_moveout",
+    "https://dam.bakerhughes.com/m/39739ab6ba6a9442/original/Q1-2022-Orbit-Article-Nitric-Acid-Article.pdf",
+    "https://primis.phmsa.dot.gov/stakeholder-comms/factsheets/fsleakdetectionsystems/",
+    "https://www.slb.com/resource-library/article/valve-insights/how-it-works-pipeline-pigging",
+    "https://glossary.slb.com/terms/w/water_cut",
+    "https://glossary.slb.com/Terms/d/dynamometer_card.aspx",
+    "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-gas-lift",
+    "https://glossary.slb.com/en/terms/h/hole_cleaning",
+    "https://glossary.slb.com/en/terms/m/mechanical_specific_energy",
+    "https://glossary.slb.com/en/terms/s/stick_and_slip"
+  ],
+  "stages": [
+    {
+      "id": "geology",
+      "name": "地质勘察",
+      "added": 3,
+      "total": 8
+    },
+    {
+      "id": "seismic",
+      "name": "物探",
+      "added": 3,
+      "total": 8
+    },
+    {
+      "id": "drilling",
+      "name": "钻井",
+      "added": 3,
+      "total": 8
+    },
+    {
+      "id": "mudlogging",
+      "name": "录井",
+      "added": 3,
+      "total": 8
+    },
+    {
+      "id": "welllog",
+      "name": "测井",
+      "added": 3,
+      "total": 9
+    },
+    {
+      "id": "cementing",
+      "name": "固井",
+      "added": 3,
+      "total": 7
+    },
+    {
+      "id": "completion",
+      "name": "完井",
+      "added": 3,
+      "total": 7
+    },
+    {
+      "id": "perforation",
+      "name": "射孔",
+      "added": 3,
+      "total": 7
+    },
+    {
+      "id": "production",
+      "name": "采油",
+      "added": 3,
+      "total": 8
+    },
+    {
+      "id": "workover",
+      "name": "修井",
+      "added": 3,
+      "total": 8
+    },
+    {
+      "id": "eor",
+      "name": "增采",
+      "added": 3,
+      "total": 8
+    },
+    {
+      "id": "transport",
+      "name": "运输",
+      "added": 3,
+      "total": 8
+    },
+    {
+      "id": "refining",
+      "name": "加工",
+      "added": 3,
+      "total": 8
+    }
+  ],
+  "cases": [
+    {
+      "id": "learn-tubing-pit",
+      "sceneId": "wo3",
+      "stage": "workover",
+      "title": "油管点蚀深度代理估计",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.7846525224208307,
+            "baseline": 19.489612970239893,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.848,
+            "baseline": 0.84,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Monitoring Downhole Corrosion",
+          "url": "https://www.slb.com/-/media/files/oilfield-review/2-casing-corr-2-english",
+          "note": "支持超声等腐蚀检测方式的专业概念；壁损值不是实测厚度。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "修井-油管点蚀深度代理估计.case.ts"
+    },
+    {
+      "id": "learn-leak-depth",
+      "sceneId": "wo3",
+      "stage": "workover",
+      "title": "温度剖面泄漏候选定位",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 6.91584465335336,
+            "baseline": 25.832826963294764,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.928,
+            "baseline": 0.936,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Defining Production Logging",
+          "url": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-production-logging",
+          "note": "支持温度和流量剖面诊断背景，不执行现场井筒反演。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "修井-温度剖面泄漏候选定位.case.ts"
+    },
+    {
+      "id": "learn-sand-release",
+      "sceneId": "wo2",
+      "stage": "workover",
+      "title": "砂卡解卡方式相似检索",
+      "method": "适配约束图＋标准化近邻排序",
+      "task": "selection",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.895945308816596,
+            "baseline": 0.17834394904458598,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.9043478260869565,
+            "baseline": 0.3652173913043478,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Sand Handling During Cleanout",
+          "url": "https://www.slb.com/resource-library/technical-paper/wi/spe-166531",
+          "note": "说明清砂与井下干预的复杂性；演示候选不是作业指令。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "修井-砂卡解卡方式相似检索.case.ts"
+    },
+    {
+      "id": "learn-distillation",
+      "sceneId": "r1",
+      "stage": "refining",
+      "title": "原油馏程分位点预测",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.877952069419202,
+            "baseline": 22.925634307368988,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.944,
+            "baseline": 0.92,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.5117687859923215,
+            "baseline": 30.336383338402854,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.936,
+            "baseline": 0.936,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.970371503441414,
+            "baseline": 35.53890939258639,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.944,
+            "baseline": 0.944,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "EIA Refining Process",
+          "url": "https://www.eia.gov/energyexplained/oil-and-petroleum-products/refining-crude-oil-the-refining-process.php",
+          "note": "支持馏分分离和调和概念，不提供商业配方或产品认证。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "加工-原油馏程分位点预测.case.ts"
+    },
+    {
+      "id": "learn-blending",
+      "sceneId": "r1",
+      "stage": "refining",
+      "title": "成品油调和质量资源权衡",
+      "method": "双响应岭回归代理＋约束帕累托搜索",
+      "task": "design",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.48387168304667144,
+            "baseline": 4.857362254346357,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.864,
+            "baseline": 0.912,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.7815369555261691,
+            "baseline": 8.278655041761246,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.848,
+            "baseline": 0.84,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "EIA Refining Process",
+          "url": "https://www.eia.gov/energyexplained/oil-and-petroleum-products/refining-crude-oil-the-refining-process.php",
+          "note": "支持馏分分离和调和概念，不提供商业配方或产品认证。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "加工-成品油调和质量资源权衡.case.ts"
+    },
+    {
+      "id": "learn-fouling",
+      "sceneId": "r3",
+      "stage": "refining",
+      "title": "换热器污垢热阻代理估计",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.3848609113530308,
+            "baseline": 21.694607240713577,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.928,
+            "baseline": 0.856,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "US DOE Cooling-system Fouling",
+          "url": "https://www.energy.gov/cmei/femp/water-efficient-technology-opportunity-side-stream-filtration-cooling-towers",
+          "note": "支持结垢、污垢与换热能耗关系，指数不等于实际热阻。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "加工-换热器污垢热阻代理估计.case.ts"
+    },
+    {
+      "id": "learn-vdl",
+      "sceneId": "c1",
+      "stage": "cementing",
+      "title": "变密度波列胶结模式判读",
+      "method": "多指标观测特征＋kNN",
+      "task": "waveform",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Variable-density Log",
+          "url": "https://glossary.slb.com/en/terms/v/variable-density_log",
+          "note": "支持声波列与胶结解释的关系；不据此判断真实层间封隔。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "固井-变密度波列胶结模式判读.case.ts"
+    },
+    {
+      "id": "learn-cement-contamination",
+      "sceneId": "c3",
+      "stage": "cementing",
+      "title": "水泥浆污染状态识别",
+      "method": "多指标观测特征＋kNN",
+      "task": "classification",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.16228070175438597,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.3217391304347826,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Spacer Fluid",
+          "url": "https://glossary.slb.com/en/terms/s/spacer_fluid",
+          "note": "用于理解流体相容与污染问题，类别是简化的合成参考。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "固井-水泥浆污染状态识别.case.ts"
+    },
+    {
+      "id": "learn-cement-time",
+      "sceneId": "c2",
+      "stage": "cementing",
+      "title": "水泥浆稠化时间预测",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.679719728141223,
+            "baseline": 37.697739052623035,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.792,
+            "baseline": 0.776,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Thickening Time",
+          "url": "https://glossary.slb.com/en/terms/t/thickening_time",
+          "note": "支持稠化时间和可泵性的概念，示例不判断施工安全窗口。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "固井-水泥浆稠化时间预测.case.ts"
+    },
+    {
+      "id": "learn-geochem-background",
+      "sceneId": "g2",
+      "stage": "geology",
+      "title": "化探多指标稳健背景检测",
+      "method": "正常背景中位数/MAD稳健检测",
+      "task": "robust",
+      "reference": 210,
+      "test": 155,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "USGS Soil Geochemical Maps",
+          "url": "https://www.usgs.gov/publications/geochemical-and-mineralogical-maps-interpretation-soils-conterminous-united-states",
+          "note": "用于理解背景浓度与空间地球化学解释，数据由本项目合成。"
+        },
+        {
+          "title": "NIST Median Absolute Deviation",
+          "url": "https://itl.nist.gov/div898/software/dataplot/refman2/auxillar/mad.htm",
+          "note": "方法依据：中位数和MAD稳健尺度；阈值由正常参考集估计。"
+        }
+      ],
+      "source": "地质勘察-化探多指标稳健背景检测.case.ts"
+    },
+    {
+      "id": "learn-symbols",
+      "sceneId": "g3",
+      "stage": "geology",
+      "title": "地质图符号形态分类",
+      "method": "图形形态特征＋kNN",
+      "task": "classification",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.7127847362927487,
+            "baseline": 0.4040108797142045,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.7391304347826086,
+            "baseline": 0.46956521739130436,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "USGS FGDC Geologic Map Symbols",
+          "url": "https://www.usgs.gov/programs/national-cooperative-geologic-mapping-program/science/national-geologic-map-database-0",
+          "note": "用于了解地质图符号标准；演示使用自绘的简化形状。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "地质勘察-地质图符号形态分类.case.ts"
+    },
+    {
+      "id": "learn-mineral",
+      "sceneId": "g1",
+      "stage": "geology",
+      "title": "蚀变矿物吸收带识别",
+      "method": "吸收带特征＋kNN",
+      "task": "waveform",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "USGS Spectral Library",
+          "url": "https://www.usgs.gov/labs/spectroscopy-lab/usgs-spectral-library",
+          "note": "用于了解矿物光谱吸收特征；实验不直接使用该光谱库。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "地质勘察-蚀变矿物吸收带识别.case.ts"
+    },
+    {
+      "id": "learn-co2",
+      "sceneId": "e3",
+      "stage": "eor",
+      "title": "CO2驱压力配注响应筛选",
+      "method": "双响应岭回归代理＋约束帕累托搜索",
+      "task": "design",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 4.278933414542189,
+            "baseline": 21.892576776311987,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.896,
+            "baseline": 0.952,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.6711646110598244,
+            "baseline": 18.32243815481544,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.92,
+            "baseline": 0.896,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "US DOE Enhanced Oil Recovery",
+          "url": "https://www.energy.gov/hgeo/enhanced-oil-recovery",
+          "note": "支持CO2驱油背景，合成响应不代表矿场增油量。"
+        },
+        {
+          "title": "SLB Minimum Miscibility Pressure",
+          "url": "https://glossary.slb.com/en/Terms/m/minimum_miscibility_pressure.aspx",
+          "note": "支持压力、温度与组分相关的混相概念，不估计真实MMP。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "增采-CO2驱压力配注响应筛选.case.ts"
+    },
+    {
+      "id": "learn-falloff",
+      "sceneId": "e2",
+      "stage": "eor",
+      "title": "压裂停泵压力形态分级",
+      "method": "多指标观测特征＋kNN",
+      "task": "waveform",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "BCER DFIT Recommendations",
+          "url": "https://www.bc-er.ca/files/operations-documentation/Reservoir-Management/Well-Testing/Diagnostic-Fracture-Injection-Test-DFIT-Recommendations_revised-20Jul2023.pdf",
+          "note": "支持注入压降测试背景，演示不解释真实闭合压力或渗透率。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "增采-压裂停泵压力形态分级.case.ts"
+    },
+    {
+      "id": "learn-polymer",
+      "sceneId": "e3",
+      "stage": "eor",
+      "title": "聚合物黏度保持率预测",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.0806271134020045,
+            "baseline": 13.020497555096359,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.904,
+            "baseline": 0.888,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Polymer",
+          "url": "https://glossary.slb.com/en/terms/p/polymer",
+          "note": "用于理解聚合物与黏度，温盐剪切函数由本项目简化设定。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "增采-聚合物黏度保持率预测.case.ts"
+    },
+    {
+      "id": "learn-inflow",
+      "sceneId": "co4",
+      "stage": "completion",
+      "title": "分段流入贡献比例估计",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.2653669996040353,
+            "baseline": 14.27248561234799,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.904,
+            "baseline": 0.888,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.7659822797184983,
+            "baseline": 13.734959021344606,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.944,
+            "baseline": 0.84,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.72846992379249,
+            "baseline": 12.1027394549208,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.928,
+            "baseline": 0.904,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Flow Profile",
+          "url": "https://glossary.slb.com/en/terms/f/flow_profile",
+          "note": "支持分段流量和总流量比例概念，比例来自合成数据。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "完井-分段流入贡献比例估计.case.ts"
+    },
+    {
+      "id": "learn-seal",
+      "sceneId": "co3",
+      "stage": "completion",
+      "title": "封隔器压力衰减模式识别",
+      "method": "多指标观测特征＋kNN",
+      "task": "waveform",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB BluePack RH Pressure Testing",
+          "url": "https://www.slb.com/videos/bluepack-rh",
+          "note": "仅支持封隔与压力验证的业务背景；不复制设备额定值。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "完井-封隔器压力衰减模式识别.case.ts"
+    },
+    {
+      "id": "learn-screen",
+      "sceneId": "co1",
+      "stage": "completion",
+      "title": "防砂筛管粒度适配选型",
+      "method": "适配约束图＋标准化近邻排序",
+      "task": "selection",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.8828277537025572,
+            "baseline": 0.19047619047619047,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.8782608695652174,
+            "baseline": 0.4,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Sieve Analysis",
+          "url": "https://glossary.slb.com/en/terms/s/sieve_analysis",
+          "note": "支持粒度分布与防砂背景；教学适配范围不是实际筛管设计标准。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "完井-防砂筛管粒度适配选型.case.ts"
+    },
+    {
+      "id": "learn-shot-acoustic",
+      "sceneId": "p4",
+      "stage": "perforation",
+      "title": "射孔声学瞬态模式识别",
+      "method": "离散傅里叶频带特征＋kNN",
+      "task": "waveform",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Perforating",
+          "url": "https://www.slb.com/products-and-services/innovating-in-oil-and-gas/completions/well-completions/perforating",
+          "note": "支持射孔设计和监测背景；本例为小规模教学近似。"
+        },
+        {
+          "title": "SciPy Discrete Fourier Transforms",
+          "url": "https://docs.scipy.org/doc/scipy/tutorial/fft.html",
+          "note": "方法依据：离散傅里叶频谱；演示直接计算小窗口DFT，不声称使用快速FFT。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "射孔-射孔声学瞬态模式识别.case.ts"
+    },
+    {
+      "id": "learn-charge-tradeoff",
+      "sceneId": "p3",
+      "stage": "perforation",
+      "title": "射孔弹响应与损伤权衡",
+      "method": "双响应岭回归代理＋约束帕累托搜索",
+      "task": "design",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.8291887306694032,
+            "baseline": 17.31245493662777,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.872,
+            "baseline": 0.912,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.7583742477385556,
+            "baseline": 18.877265506873943,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.896,
+            "baseline": 0.896,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Perforating",
+          "url": "https://www.slb.com/products-and-services/innovating-in-oil-and-gas/completions/well-completions/perforating",
+          "note": "支持射孔设计和监测背景；本例为小规模教学近似。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "射孔-射孔弹响应与损伤权衡.case.ts"
+    },
+    {
+      "id": "learn-underbalance",
+      "sceneId": "p4",
+      "stage": "perforation",
+      "title": "负压射孔清洁响应预测",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.0110863092529003,
+            "baseline": 16.727160483807857,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.84,
+            "baseline": 0.816,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Perforation Cleanup via Dynamic Underbalance",
+          "url": "https://www.slb.com/resource-library/technical-paper/pe/spe-143997",
+          "note": "用于理解清洁孔道与动态负压的关系，不移用论文效果数字。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "射孔-负压射孔清洁响应预测.case.ts"
+    },
+    {
+      "id": "learn-lag-depth",
+      "sceneId": "m4",
+      "stage": "mudlogging",
+      "title": "岩屑迟到深度校正估计",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 7.959309338399524,
+            "baseline": 42.27773013954305,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.784,
+            "baseline": 0.848,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Defining Mud Logging",
+          "url": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-mud-logging",
+          "note": "支持气测、岩屑与迟到时间的专业概念。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "录井-岩屑迟到深度校正估计.case.ts"
+    },
+    {
+      "id": "learn-cuttings-mixture",
+      "sceneId": "m1",
+      "stage": "mudlogging",
+      "title": "岩屑颜色混合组分反演",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.2159138044837625,
+            "baseline": 29.02845677136399,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.912,
+            "baseline": 0.928,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.533795184481057,
+            "baseline": 21.479924966033423,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.896,
+            "baseline": 0.976,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.4370073258185654,
+            "baseline": 19.64432876260618,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.896,
+            "baseline": 0.936,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Defining Mud Logging",
+          "url": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-mud-logging",
+          "note": "支持气测、岩屑与迟到时间的专业概念。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "录井-岩屑颜色混合组分反演.case.ts"
+    },
+    {
+      "id": "learn-gas-baseline",
+      "sceneId": "m2",
+      "stage": "mudlogging",
+      "title": "气测背景漂移校正代理",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.710533413348255,
+            "baseline": 19.559447837036007,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.864,
+            "baseline": 0.912,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Defining Mud Logging",
+          "url": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-mud-logging",
+          "note": "支持气测、岩屑与迟到时间的专业概念。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "录井-气测背景漂移校正代理.case.ts"
+    },
+    {
+      "id": "learn-fluid",
+      "sceneId": "w4",
+      "stage": "welllog",
+      "title": "多曲线流体属性模式识别",
+      "method": "多指标观测特征＋kNN",
+      "task": "classification",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.5710594315245477,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.6782608695652174,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Basic Well Log Interpretation",
+          "url": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-log-interpretation",
+          "note": "用于理解多曲线岩性与流体解释；本例不替代真实井标定。"
+        },
+        {
+          "title": "SLB Water-cut Meter",
+          "url": "https://glossary.slb.com/en/terms/w/water-cut_meter",
+          "note": "说明持水率和含水率并不等同，避免把单项电学读数当作含水率。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "测井-多曲线流体属性模式识别.case.ts"
+    },
+    {
+      "id": "learn-nmr",
+      "sceneId": "w2",
+      "stage": "welllog",
+      "title": "核磁T2谱储层类型识别",
+      "method": "T₂谱分区积分＋kNN",
+      "task": "waveform",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB NMR and T2",
+          "url": "https://glossary.slb.com/en/terms/n/nmr",
+          "note": "支持T2分布和孔隙信息的专业背景；不使用实测核磁数据。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "测井-核磁T2谱储层类型识别.case.ts"
+    },
+    {
+      "id": "learn-shale",
+      "sceneId": "w2",
+      "stage": "welllog",
+      "title": "泥质含量多曲线估计",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.6372709975813722,
+            "baseline": 14.06503823431228,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.88,
+            "baseline": 0.816,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Basic Well Log Interpretation",
+          "url": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-log-interpretation",
+          "note": "用于理解多曲线岩性与流体解释；本例不替代真实井标定。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "测井-泥质含量多曲线估计.case.ts"
+    },
+    {
+      "id": "learn-avo",
+      "sceneId": "s4",
+      "stage": "seismic",
+      "title": "AVO截距梯度组合分类",
+      "method": "AVO截距梯度拟合＋kNN",
+      "task": "waveform",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB AVO Seismic Inversion",
+          "url": "https://www.slb.com/products-and-services/innovating-in-oil-and-gas/reservoir-characterization/seismic/subsurface-imaging/seismic-reservoir-characterization/seismic-inversion/avo-seismic-inversion",
+          "note": "用于理解截距和梯度属性，不代表本例完成工业AVO反演。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "物探-AVO截距梯度组合分类.case.ts"
+    },
+    {
+      "id": "learn-horizon-track",
+      "sceneId": "s1",
+      "stage": "seismic",
+      "title": "地震层位连续智能追踪",
+      "method": "逻辑回归像素评分＋动态规划连续追踪",
+      "task": "tracking",
+      "reference": 1428,
+      "test": 1428,
+      "metrics": [
+        [
+          {
+            "name": "层位平均绝对偏差",
+            "ai": 0,
+            "baseline": 4.809523809523809,
+            "higher": false
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Petrel Seismic Interpretation",
+          "url": "https://www.slb.com/products-and-services/delivering-digital-at-scale/software/petrel-subsurface-software/petrel/petrel-geophysics/petrel-seismic-interpretation",
+          "note": "说明层位追踪的业务背景；教学动态规划为本项目实现。"
+        },
+        {
+          "title": "scikit-learn Logistic Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression",
+          "note": "方法依据：logit与二分类分数，不把分数冒充已校准概率。"
+        }
+      ],
+      "source": "物探-地震层位连续智能追踪.case.ts"
+    },
+    {
+      "id": "learn-velocity",
+      "sceneId": "s3",
+      "stage": "seismic",
+      "title": "时距观测速度代理回归",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.3391166169117082,
+            "baseline": 0.8504171539942595,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.936,
+            "baseline": 0.888,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Normal Moveout",
+          "url": "https://glossary.slb.com/terms/n/normal_moveout",
+          "note": "支持时距双曲线的专业概念；合成单层模型不含各向异性。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "物探-时距观测速度代理回归.case.ts"
+    },
+    {
+      "id": "learn-compressor",
+      "sceneId": "t3",
+      "stage": "transport",
+      "title": "压缩机振动频谱工况识别",
+      "method": "离散傅里叶频带特征＋kNN",
+      "task": "waveform",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "Baker Hughes Compressor Vibration Case",
+          "url": "https://dam.bakerhughes.com/m/39739ab6ba6a9442/original/Q1-2022-Orbit-Article-Nitric-Acid-Article.pdf",
+          "note": "支持振动频谱与喘振监测背景，示例不复制实测频谱或故障结论。"
+        },
+        {
+          "title": "SciPy Discrete Fourier Transforms",
+          "url": "https://docs.scipy.org/doc/scipy/tutorial/fft.html",
+          "note": "方法依据：离散傅里叶频谱；演示直接计算小窗口DFT，不声称使用快速FFT。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "运输-压缩机振动频谱工况识别.case.ts"
+    },
+    {
+      "id": "learn-station-balance",
+      "sceneId": "t1",
+      "stage": "transport",
+      "title": "多站流量守恒异常识别",
+      "method": "正常背景中位数/MAD稳健检测",
+      "task": "robust",
+      "reference": 210,
+      "test": 155,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.8523809523809525,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.896774193548387,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "PHMSA Leak Detection Systems",
+          "url": "https://primis.phmsa.dot.gov/stakeholder-comms/factsheets/fsleakdetectionsystems/",
+          "note": "支持库存守恒监测概念，异常平衡残差不能直接确认泄漏。"
+        },
+        {
+          "title": "NIST Median Absolute Deviation",
+          "url": "https://itl.nist.gov/div898/software/dataplot/refman2/auxillar/mad.htm",
+          "note": "方法依据：中位数和MAD稳健尺度；阈值由正常参考集估计。"
+        }
+      ],
+      "source": "运输-多站流量守恒异常识别.case.ts"
+    },
+    {
+      "id": "learn-pig-condition",
+      "sceneId": "t2",
+      "stage": "transport",
+      "title": "清管候选工况稳健筛查",
+      "method": "正常背景中位数/MAD稳健检测",
+      "task": "robust",
+      "reference": 210,
+      "test": 155,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Pipeline Pigging",
+          "url": "https://www.slb.com/resource-library/article/valve-insights/how-it-works-pipeline-pigging",
+          "note": "支持清管与管线维护背景，不能据此确定清管周期。"
+        },
+        {
+          "title": "NIST Median Absolute Deviation",
+          "url": "https://itl.nist.gov/div898/software/dataplot/refman2/auxillar/mad.htm",
+          "note": "方法依据：中位数和MAD稳健尺度；阈值由正常参考集估计。"
+        }
+      ],
+      "source": "运输-清管候选工况稳健筛查.case.ts"
+    },
+    {
+      "id": "learn-watercut",
+      "sceneId": "pr2",
+      "stage": "production",
+      "title": "含水率多工况软测量",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.381224770681657,
+            "baseline": 20.942045022557387,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.848,
+            "baseline": 0.904,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Water Cut",
+          "url": "https://glossary.slb.com/terms/w/water_cut",
+          "note": "区分产出水体积比例与井筒持水率，演示仅用合成比例。"
+        },
+        {
+          "title": "SLB Water-cut Meter",
+          "url": "https://glossary.slb.com/en/terms/w/water-cut_meter",
+          "note": "说明持水率和含水率并不等同，避免把单项电学读数当作含水率。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "采油-含水率多工况软测量.case.ts"
+    },
+    {
+      "id": "learn-pump-energy",
+      "sceneId": "pr1",
+      "stage": "production",
+      "title": "抽油机运行能效代理",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.1881586624657274,
+            "baseline": 18.400262189212572,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.888,
+            "baseline": 0.912,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Dynamometer Card",
+          "url": "https://glossary.slb.com/Terms/d/dynamometer_card.aspx",
+          "note": "用于理解载荷、位移与泵工况；能效指数为合成响应。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "采油-抽油机运行能效代理.case.ts"
+    },
+    {
+      "id": "learn-gaslift",
+      "sceneId": "pr3",
+      "stage": "production",
+      "title": "气举注气量响应优选",
+      "method": "双响应岭回归代理＋约束帕累托搜索",
+      "task": "design",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 4.527008769297764,
+            "baseline": 11.279754458135072,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.832,
+            "baseline": 0.88,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.4830140372931708,
+            "baseline": 16.216401766497718,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.896,
+            "baseline": 0.904,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Defining Gas Lift",
+          "url": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-gas-lift",
+          "note": "支持注气量和举升效益的业务背景；不使用厂商优化器。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "采油-气举注气量响应优选.case.ts"
+    },
+    {
+      "id": "learn-hole-cleaning",
+      "sceneId": "d2",
+      "stage": "drilling",
+      "title": "井眼清洁多指标风险分级",
+      "method": "多指标观测特征＋kNN",
+      "task": "classification",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.7940668824163969,
+            "baseline": 0.5535460992907801,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.8347826086956521,
+            "baseline": 0.591304347826087,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Hole Cleaning",
+          "url": "https://glossary.slb.com/en/terms/h/hole_cleaning",
+          "note": "用于理解携岩和岩屑床问题；风险等级只是教学标签。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "钻井-井眼清洁多指标风险分级.case.ts"
+    },
+    {
+      "id": "learn-mse",
+      "sceneId": "d1",
+      "stage": "drilling",
+      "title": "机械比能多参数代理估计",
+      "method": "二次岭回归＋独立区间校准",
+      "task": "regression",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 8.135604676125544,
+            "baseline": 24.819404686292543,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.928,
+            "baseline": 0.92,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Mechanical Specific Energy",
+          "url": "https://glossary.slb.com/en/terms/m/mechanical_specific_energy",
+          "note": "支持机械比能与钻井效率概念，不提供现场钻参。"
+        },
+        {
+          "title": "scikit-learn Ridge Regression",
+          "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+          "note": "方法依据：带正则化的回归与多项式特征；不调用Python服务。"
+        }
+      ],
+      "source": "钻井-机械比能多参数代理估计.case.ts"
+    },
+    {
+      "id": "learn-torsion",
+      "sceneId": "d4",
+      "stage": "drilling",
+      "title": "钻柱扭振频带工况识别",
+      "method": "离散傅里叶频带特征＋kNN",
+      "task": "waveform",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "references": [
+        {
+          "title": "SLB Stick/Slip",
+          "url": "https://glossary.slb.com/en/terms/s/stick_and_slip",
+          "note": "用于理解钻柱扭振与黏滑；谱形为合成窗口。"
+        },
+        {
+          "title": "SciPy Discrete Fourier Transforms",
+          "url": "https://docs.scipy.org/doc/scipy/tutorial/fft.html",
+          "note": "方法依据：离散傅里叶频谱；演示直接计算小窗口DFT，不声称使用快速FFT。"
+        },
+        {
+          "title": "scikit-learn Nearest Neighbors",
+          "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+          "note": "方法依据：参考标准化、距离与近邻学习；计算为纯前端自实现。"
+        }
+      ],
+      "source": "钻井-钻柱扭振频带工况识别.case.ts"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "base": "http://127.0.0.1:4173/",
+  "results": [
+    {
+      "test": "matrix-data-and-drilldown",
+      "passed": true
+    },
+    {
+      "test": "grouped-method-filtering",
+      "passed": true
+    },
+    {
+      "test": "complete-pending-scene-and-contextual-import",
+      "passed": true
+    },
+    {
+      "test": "method-and-scene-create-persistence-reference-protection",
+      "passed": true
+    },
+    {
+      "test": "case-metadata-edit-preserves-demo-resources",
+      "passed": true
+    },
+    {
+      "test": "complete-backup-restore-invalid-backup-atomicity-and-individual-recovery",
+      "passed": true
+    },
+    {
+      "test": "registry-checks-and-pending-scenes",
+      "passed": true
+    },
+    {
+      "test": "responsive",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "test": "responsive",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "test": "responsive",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "test": "english-built-in-content",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

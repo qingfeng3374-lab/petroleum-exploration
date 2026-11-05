@@ -1,0 +1,87 @@
+{
+  "base": "http://127.0.0.1:4173/",
+  "results": [
+    {
+      "id": "workover-ai",
+      "whatWhyHow": true,
+      "actualRecalculation": true,
+      "threeViews": true
+    },
+    {
+      "id": "refining-ai",
+      "whatWhyHow": true,
+      "actualRecalculation": true,
+      "threeViews": true
+    },
+    {
+      "id": "cementing-ai",
+      "whatWhyHow": true,
+      "actualRecalculation": true,
+      "threeViews": true
+    },
+    {
+      "id": "eor-ai",
+      "whatWhyHow": true,
+      "actualRecalculation": true,
+      "threeViews": true
+    },
+    {
+      "id": "completion-ai",
+      "whatWhyHow": true,
+      "actualRecalculation": true,
+      "threeViews": true
+    },
+    {
+      "id": "perforation-ai",
+      "whatWhyHow": true,
+      "actualRecalculation": true,
+      "threeViews": true
+    },
+    {
+      "id": "mudlogging-ai",
+      "whatWhyHow": true,
+      "actualRecalculation": true,
+      "threeViews": true
+    },
+    {
+      "id": "welllog-ai",
+      "whatWhyHow": true,
+      "actualRecalculation": true,
+      "threeViews": true
+    },
+    {
+      "id": "firstbreak-ai",
+      "whatWhyHow": true,
+      "actualRecalculation": true,
+      "threeViews": true
+    },
+    {
+      "id": "transport-ai",
+      "whatWhyHow": true,
+      "actualRecalculation": true,
+      "threeViews": true
+    },
+    {
+      "id": "production-ai",
+      "whatWhyHow": true,
+      "actualRecalculation": true,
+      "threeViews": true
+    },
+    {
+      "id": "drilling-ai",
+      "whatWhyHow": true,
+      "actualRecalculation": true,
+      "threeViews": true
+    },
+    {
+      "test": "chapter-library-filter-and-live-preview",
+      "passed": true
+    },
+    {
+      "test": "responsive-algorithm-views",
+      "passed": true
+    }
+  ],
+  "missing": [],
+  "errors": []
+}

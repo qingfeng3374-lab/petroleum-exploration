@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "case": "lithology",
+      "terms": true,
+      "workflow": true,
+      "keyboardAndScatter": true
+    },
+    {
+      "case": "geochem",
+      "iteration": true,
+      "threshold": true,
+      "rankedSelection": true
+    },
+    {
+      "case": "map",
+      "areaControl": true
+    }
+  ],
+  "errors": [],
+  "overflow": false
+}

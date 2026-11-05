@@ -1,0 +1,53 @@
+{
+  "base": "http://127.0.0.1:5173/",
+  "results": [
+    {
+      "test": "real-webgl-and-13-projected-stations",
+      "passed": true
+    },
+    {
+      "test": "bidirectional-station-chapter-selection",
+      "passed": true
+    },
+    {
+      "test": "pointer-orbit-and-wheel-zoom",
+      "passed": true
+    },
+    {
+      "test": "layer-separation-viewpoint-and-keyboard-orbit",
+      "passed": true
+    },
+    {
+      "test": "d3-hierarchy-collapse-expand-search-and-scene-navigation",
+      "passed": true
+    },
+    {
+      "test": "existing-method-view-survives-remount",
+      "passed": true
+    },
+    {
+      "test": "responsive-english",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "test": "responsive-english",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "test": "responsive-english",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "test": "actual-pump-motion-and-global-pause",
+      "passed": true
+    },
+    {
+      "test": "webgl-unavailable-keeps-all-chapters-and-navigation",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,19 @@
+# Keep source files consistent across Windows and Unix checkouts.
+* text=auto eol=lf
+
+# Native Windows launcher requires CRLF.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Binary assets must not undergo line-ending conversion.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.pdf binary
+*.docx binary
+*.woff binary
+*.woff2 binary

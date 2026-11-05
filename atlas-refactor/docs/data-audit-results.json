@@ -1,0 +1,16 @@
+{
+  "stages": 13,
+  "scenes": 61,
+  "methods": 5,
+  "cases": 6,
+  "covered": 5,
+  "pending": 56,
+  "difficulty": {
+    "中": 42,
+    "高": 14,
+    "低": 5
+  },
+  "requiredMissing": [],
+  "comparedLegacyFiles": 20,
+  "changedLegacyFiles": []
+}

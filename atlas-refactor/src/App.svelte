@@ -1,0 +1,72 @@
+<script lang="ts">
+import CaseBackground from './components/CaseBackground.svelte';import CaseWorkflow from './components/CaseWorkflow.svelte';
+import {workspace,applyWorkspace,restoreBackup} from './services/workspace';import {applyMetadata} from './services/manual-case';import Admin from './pages/Admin.svelte';import SceneOverview from './components/SceneOverview.svelte';import SceneExplorer from './components/SceneExplorer.svelte';import RelatedScenes from './components/RelatedScenes.svelte';import StageMethodMatrix from './components/StageMethodMatrix.svelte';import CaseStatusPanel from './components/CaseStatusPanel.svelte';
+import {language,theme,tr,readPreference,readStringList} from "./services/preferences";
+import CaseImport from './components/CaseImport.svelte';import PageNavigation from './components/PageNavigation.svelte';import CaseDownload from './components/CaseDownload.svelte';import ActionIcon from './components/ActionIcon.svelte';import {createNavigation} from './services/navigation';import WelllogBackground from './components/WelllogBackground.svelte';import {localizeAtlas,localizeManifest} from './i18n/content';
+import {onMount,tick} from 'svelte';import Home from './pages/Home.svelte';import SiteHeader from './components/SiteHeader.svelte';import AtlasExplorer from './components/AtlasExplorer.svelte';import CaseLibrary from './components/CaseLibrary.svelte';import atlas from './data/atlas.json';import catalog from './data/catalog.json';import welllog from './data/welllog.json';import CaseFrame from './components/CaseFrame.svelte';import {load,save,remove,validate,download} from './services/packages';
+const navigation=createNavigation();let canBack=navigation.canBack;let librarySelection='geology-geochem';
+let hash=location.hash||'#/';let imported:any[]=[];let blocked:string[]=readStringList('atlas-hidden');let modal=false;let message='';let storageWarning='';
+$: source=applyWorkspace(localizeAtlas(atlas,$language),$workspace);
+$: localizedCatalog=catalog.map(m=>localizeManifest(m,$language));
+let importScene='';
+let motion=readPreference('atlas-motion','on')!=='off'&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
+let modalOpener:HTMLElement|null=null;
+onMount(()=>{const header=document.querySelector('.top')!;const observer=new ResizeObserver(()=>document.documentElement.style.setProperty('--header-height',header.getBoundingClientRect().height+'px'));observer.observe(header);return()=>observer.disconnect()});
+$: document.documentElement.classList.toggle('motion-paused',!motion);
+$: document.body.style.overflow=modal?'hidden':'';
+function toggleMotion(){motion=!motion;localStorage.setItem('atlas-motion',motion?'on':'off')}
+async function openImport(selected?:string|Event){importScene=typeof selected==='string'?selected:route[0]==='scene'?scene?.id||'':'';modalOpener=document.activeElement as HTMLElement;modal=true;message='';await tick();(document.querySelector('.dialog') as HTMLElement)?.focus()}
+function closeImport(){modal=false;modalOpener?.focus()}
+onMount(()=>{const keys=(e:KeyboardEvent)=>{if(!modal)return;if(e.key==='Escape'){e.preventDefault();closeImport()}if(e.key==='Tab'){const nodes=Array.from(document.querySelectorAll<HTMLElement>('.dialog button:not([disabled]),.dialog a[href],.dialog input:not([disabled]),.dialog select:not([disabled]),.dialog textarea:not([disabled]),.dialog iframe')).filter(el=>el.getClientRects().length);const first=nodes[0],last=nodes.at(-1);if(!first)return;if(e.shiftKey&&(document.activeElement===first||document.activeElement===document.querySelector('.dialog'))){e.preventDefault();last?.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}};document.addEventListener('keydown',keys);return()=>{document.removeEventListener('keydown',keys);document.body.style.overflow=''}});
+$: stages=source.stages.map(st=>({...st,originalName:atlas.stages.find(original=>original.id===st.id)?.name,scenes:st.scenes.map(s=>({...s,diff:$tr(s.diff),stageId:st.id,stageName:st.name}))}));
+$: scenes=stages.flatMap(s=>s.scenes);
+$: allCases=[...localizedCatalog.map(m=>({id:m.id,manifest:m,url:m.url,imported:false})),{id:'welllog-layer',manifest:localizeManifest(welllog,$language),imported:false},...imported].filter((c,i,all)=>!all.slice(i+1).some(x=>x.id===c.id));
+$: cases=allCases.filter(c=>!blocked.includes(c.id));
+$: route=hash.replace(/^#\/?/,'').split('?')[0].split('/').map((part,i,all)=>i===1&&all[0]==='stage'?({geophys:'seismic',mudlog:'mudlogging'} as Record<string,string>)[part]||part:part);
+$: params=new URLSearchParams(hash.split('?')[1]||'');
+$: tab=({1:'bg',2:'flow',3:'demo'} as any)[params.get('tab')||'']||params.get('tab')||'bg';
+$: scene=scenes.find(s=>s.id===route[1]);
+$: stage=stages.find(s=>s.id===route[1]);
+$: bound=cases.filter(c=>c.manifest.sceneId===scene?.id);
+$: current=bound.find(c=>c.id===params.get('case'))||bound[0];
+$: if(route[0]==='scene'&&current)librarySelection=current.id;
+$: if(route[0]==='cases'&&params.get('case'))librarySelection=params.get('case')!;
+$: fallback=route[0]==='scene'?'#/cases':['stage','method'].includes(route[0])?'#/chain':'#/';
+$: fallbackLabel=route[0]==='scene'?'返回案例库':['stage','method'].includes(route[0])?'返回作业链':'返回首页';
+$: breadcrumbs=[{label:$tr('首页'),href:'#/'},...(route[0]==='scene'&&scene?[{label:$tr('案例实验室'),href:'#/cases'},{label:scene.stageName,href:'#/stage/'+scene.stageId},{label:scene.name}]:[{label:route[0]==='matrix'?$tr('环节与方法矩阵'):route[0]==='chain'?$tr('作业链'):route[0]==='stage'?stage?.name||$tr('作业链'):route[0]==='method'?(source.methods as any)[route[1]]?.name||$tr('方法'):route[0]==='cases'?$tr('案例实验室'):route[0]==='guide'?$tr('协作接入'):route[0]==='admin'?$tr('本地内容管理'):$tr('页面')}])];
+const links=(c:any,t=tab)=>`#/scene/${c.manifest.sceneId}?case=${c.id}&tab=${t}`;
+onMount(()=>{const change=()=>{const next=location.hash||'#/';const sameScene=hash.split('?')[0]===next.split('?')[0]&&next.startsWith('#/scene/');canBack=navigation.record(next);hash=next;if(sameScene)requestAnimationFrame(()=>document.querySelector('.tabs')?.scrollIntoView({block:'start'}));else window.scrollTo(0,0)};const follow=(event:MouseEvent)=>{if(event.defaultPrevented||event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;const link=(event.target as Element).closest<HTMLAnchorElement>('a[href^="#/"]');if(!link||link.hasAttribute('download')||link.target&&link.target!=='_self')return;event.preventDefault();const next=link.hash;if(next!==location.hash){location.hash=next;canBack=navigation.record(next)}};document.addEventListener('click',follow);window.addEventListener('hashchange',change);load().then(v=>{imported=v.filter(record=>record&&record.id===record.manifest?.id&&Array.isArray(record.files)&&!validate(record.manifest,scenes).length);if(imported.length!==v.length)storageWarning='部分本地案例格式无效，已跳过加载，请检查原文件或备份。'}).catch(()=>storageWarning='无法读取本地案例存储');return()=>{window.removeEventListener('hashchange',change);document.removeEventListener('click',follow)}});
+async function accept(candidate:any){if(!candidate)return;try{await save(candidate);blocked=blocked.filter(id=>id!==candidate.id);localStorage.setItem('atlas-hidden',JSON.stringify(blocked));imported=[...imported,candidate];closeImport();location.hash=links(candidate,'bg')}catch(e){storageWarning='保存失败，案例尚未添加，请导出备份并检查浏览器存储。';message=storageWarning;throw new Error(storageWarning)}}
+async function del(c:any){if(!confirm($tr('移除此案例？内置案例可恢复，本地案例需重新导入。')))return;if(c.imported){await remove(c.id);imported=imported.filter(x=>x.id!==c.id)}else{blocked=[...blocked,c.id];localStorage.setItem('atlas-hidden',JSON.stringify(blocked))}}
+async function restoreContent(value:any){blocked=await restoreBackup(value,blocked);imported=await load()}
+function restoreHidden(id:string){const next=blocked.filter(x=>x!==id);localStorage.setItem('atlas-hidden',JSON.stringify(next));blocked=next}
+async function updateCase(record:any,metadata:any){const candidate=applyMetadata(record,metadata,scenes);const errors=validate(candidate.manifest,scenes);if(errors.length)throw Error(errors.join('；'));await save(candidate);imported=imported.map(c=>c.id===candidate.id?candidate:c)}
+</script>
+
+<svelte:head><title>{$tr("石油勘探开发的智能化可能性地图")}</title></svelte:head>
+<a class="skip-link" href="#main-content" onclick={e=>{e.preventDefault();document.getElementById('main-content')?.focus()}}>{$tr("跳转到主要内容")}</a>
+<SiteHeader {route} {motion} onadd={openImport} onmotion={toggleMotion}/>
+<main class="wrap" id="main-content" tabindex="-1">
+{#if route[0]}<PageNavigation items={breadcrumbs} backLabel={canBack?'返回上一页':fallbackLabel} onback={()=>navigation.back(fallback)}/>{/if}
+{#if storageWarning}<p class="notice">{$tr(storageWarning)}</p>{/if}
+{#if !route[0]}
+<Home {scenes} {stages} {cases} {source} {motion}/>
+{:else if route[0]==='matrix'}
+<StageMethodMatrix {stages} methods={source.methods} {cases}/>
+{:else if route[0]==='chain'}
+<div class="page-head"><span class="eyebrow">THE COMPLETE CHAIN</span><h1>{$tr("十三个环节，一条探索路径。")}</h1><p>{$tr("每个环节提供明确的业务问题、AI 介入点与数据条件。")}</p></div><AtlasExplorer {stages} {scenes} methods={source.methods} {motion}/>
+{:else if route[0]==='stage'||route[0]==='method'}
+<div class="page-head"><span class="eyebrow">EXPLORE THE POSSIBILITIES</span><h1>{route[0]==='stage'?stage?.name:(source.methods as any)[route[1]]?.name||$tr("方法")}<span>{$tr("的智能化可能")}</span></h1><p>{route[0]==='stage'?stage?.blurb:(source.methods as any)[route[1]]?.desc}</p></div><SceneExplorer {stages} methods={source.methods} {cases} mode={route[0]} id={route[1]}/>
+{:else if route[0]==='scene'&&scene}
+<div class="page-head"><span class="eyebrow">{scene.stageName} / {scene.id.toUpperCase()}</span><h1>{scene.name}</h1><p>{scene.intro}</p><div class="tags"><span>{$tr("难度")} {scene.diff}</span>{#each scene.methods as m}<a href={'#/method/'+m}>{(source.methods as any)[m]?.name}</a>{/each}</div></div>
+{#if current}<details class="scene-context"><summary>{$tr('场景速览：业务、数据与参考方向')}</summary><SceneOverview {scene} {stages} methods={source.methods} pending={false} onadd={()=>openImport(scene.id)}/></details><div class="case-page-actions"><a class="action-button secondary-button" href="#/cases"><ActionIcon name="grid"/>{$tr('返回案例库')}</a><CaseDownload kase={current}/>{#if tab!=='demo'&&current.manifest.tabs.demo}<a class="primary" href={links(current,'demo')}>{$tr('运行演示')}<ActionIcon/></a>{/if}</div>{#if current.imported}<p class="notice">{$tr('导入内容使用作者原文。')}</p>{/if}<div class="case-switch">{#each bound as c}<a class:active={c.id===current.id} href={links(c)}>{c.manifest.title}</a>{/each}</div><div class="tabs">{#each [['bg','01',$tr("专业背景")],['flow','02',$tr("案例流程")],['demo','03',$tr("案例演示")]] as [key,num,label]}<a class:active={tab===key} href={links(current,key)}><small>{num}</small> {label}</a>{/each}</div>{#if current.manifest.extensions?.atlas||current.url}{#key current.id + (current.imported ? '-imported' : '-builtin')}<CaseFrame kase={current} {tab} {motion}/>{/key}{:else if tab==='demo'}{#if current.manifest.tabs.demo}{#key current.id + (current.imported ? '-imported' : '-builtin')}<CaseFrame kase={current} {tab} {motion}/>{/key}{:else}<p class="notice">{$tr("此历史案例没有可运行示范。")}</p>{/if}{:else if tab==='flow'}<CaseWorkflow workflow={current.manifest.tabs.workflow} illustrative={current.id==='welllog-layer'&&!current.imported}/>{:else if current.id==='welllog-layer'&&!current.imported}<WelllogBackground background={current.manifest.tabs.background}/>{:else}<CaseBackground background={current.manifest.tabs.background}/>{/if}{:else}<SceneOverview {scene} {stages} methods={source.methods} onadd={()=>openImport(scene.id)}/>{/if}<RelatedScenes {scene} {scenes} methods={source.methods}/>
+{:else if route[0]==='cases'}
+<div class="page-head"><span class="eyebrow">CASE LABORATORY</span><h1>{$tr("把可能性，变成可观察的实验。")}</h1><p>{$tr("各环节的可运行 AI 案例与经典测井基线，均可查看方法、依据和独立检验。")}</p></div><CaseLibrary {cases} {stages} {motion} bind:selected={librarySelection} onremove={del}/><CaseStatusPanel {cases} {stages} methods={source.methods} onadd={openImport}/>{#if blocked.length}<button onclick={()=>{blocked=[];localStorage.removeItem('atlas-hidden')}}>{$tr("恢复已隐藏的内置案例（")}{blocked.length}）</button>{/if}
+{:else if route[0]==='guide'}
+<div class="page-head"><span class="eyebrow">CONTRIBUTOR'S GUIDE</span><h1>{$tr("把你的案例，放进地图。")}</h1><p>{$tr("统一的旧包协议，加上可独立运行的单文件入口。")}</p></div><article class="paper"><h2>{$tr("方式一 / ZIP 或完整案例文件夹")}</h2><a href="examples/firstbreak-pick-case.zip" download>{$tr("下载原站初至拾取示例包")} ↓</a><p>{$tr("ZIP 可直接导入新站；旧工作台仍需先解压。")}</p><pre>{`my-case/\n  case.json\n  demo/index.html\n  demo/demo.css\n  demo/demo.js`}</pre><p>{$tr("清单保留 id、sceneId、title、tabs.background、tabs.workflow、tabs.demo。点击添加案例，可拖入整个文件夹、选择文件夹或多选文件。")}</p><h2>{$tr("方式二 / 自包含 HTML")}</h2><p>{$tr("上传含 atlas-case-manifest JSON 元信息块的单 HTML。案例库中的内置自包含案例均可下载作参考。")}</p><h2>{$tr("方式三 / 手动添加")}</h2><p>{$tr("在添加案例窗口切换到手动添加，填写基本信息、背景和流程，可选填演示 HTML。")}</p><h2>{$tr("兼容模式")}</h2><p>{$tr("支持 page、module、builtin、auto。清单不能有 script 标签。旧站需上传 release/legacy 中的兼容目录；ZIP 可直接导入新站；旧工作台仍需先解压。")}</p><h2>{$tr("协作约定")}</h2><p>{$tr("场景 ID 继承旧站；地质勘察为 g1—g4。一个场景允许多个不同 ID 案例。总文件大小上限 6 MiB。专业背景与实际方法均需明确；演示数据标明来源。")}</p><a href="#/cases">{$tr("下载现成单文件案例 →")}</a><a href="legacy/index.html#/guide" target="_blank" rel="noreferrer">{$tr("查看完整旧版协议与模板")} ↗</a></article>
+{:else if route[0]==='admin'}
+<Admin {source} cases={allCases} hidden={blocked} {imported} section={route[1]} onremove={del} onrestore={restoreHidden} onupdate={updateCase} onbackup={restoreContent} onadd={openImport}/>
+{:else}<article class="paper"><h1>{$tr("没有找到这个页面")}</h1><a href="#/">{$tr("返回地图 →")}</a></article>{/if}
+<footer class="footer"><button class="action-button secondary-button to-top-button" onclick={()=>window.scrollTo({top:0,behavior:motion?'smooth':'instant'})}><ActionIcon name="up"/>{$tr('回到页首')}</button><span class="footer-brand"><svg viewBox="0 0 40 44" aria-hidden="true"><path d="M3 14L20 5L37 14L20 23Z M3 23L20 32L37 23 M3 32L20 41L37 32" stroke="currentColor" stroke-width="1.5" fill="none"/></svg><span>{$tr("石油勘探开发 · 智能化可能性地图")}<br><small>EXPLORE BELOW. THINK BEYOND.</small></span></span><span>{$tr("13 个环节 /")} {scenes.length} {$tr("个场景 / 地质概念与合成实验")}</span><a href="#/admin">{$tr("本地管理 · 贡献与纠错 ↗")}</a></footer>
+</main>
+{#if modal}<CaseImport initialScene={importScene} {stages} {scenes} methods={source.methods} existing={cases} {motion} onclose={closeImport} onadd={accept} />{/if}

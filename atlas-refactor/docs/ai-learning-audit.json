@@ -1,0 +1,329 @@
+{
+  "version": "2.0.0",
+  "aiCases": 17,
+  "classicCases": 1,
+  "totalCases": 18,
+  "operationsCovered": 13,
+  "coveredScenes": 17,
+  "pendingScenes": 44,
+  "cases": [
+    {
+      "id": "workover-ai",
+      "title": "井史文本相似案例检索",
+      "sceneId": "wo1",
+      "stage": "workover",
+      "method": "TF-IDF · 余弦相似度 · 加权投票",
+      "metrics": [
+        {
+          "name": "独立测试宏 F1",
+          "model": 1,
+          "baseline": 0.6388888888888888,
+          "better": "higher"
+        }
+      ],
+      "training": 60,
+      "test": 30,
+      "htmlBytes": 225714,
+      "zipBytes": 79528
+    },
+    {
+      "id": "refining-ai",
+      "title": "产品质量在线软测量",
+      "sceneId": "r5",
+      "stage": "refining",
+      "method": "岭回归 · 过程变量软测量",
+      "metrics": [
+        {
+          "name": "独立测试 RMSE",
+          "model": 1.1747302826473476,
+          "baseline": 6.451051483134804,
+          "better": "lower"
+        }
+      ],
+      "training": 180,
+      "test": 120,
+      "htmlBytes": 226062,
+      "zipBytes": 79479
+    },
+    {
+      "id": "cementing-ai",
+      "title": "胶结质量多证据识别",
+      "sceneId": "c1",
+      "stage": "cementing",
+      "method": "逻辑回归 · 胶结响应分类",
+      "metrics": [
+        {
+          "name": "独立测试宏 F1",
+          "model": 1,
+          "baseline": 1,
+          "better": "higher"
+        }
+      ],
+      "training": 180,
+      "test": 120,
+      "htmlBytes": 225664,
+      "zipBytes": 79551
+    },
+    {
+      "id": "geology-geochem",
+      "title": "化探异常识别",
+      "sceneId": "g2",
+      "stage": "geology",
+      "method": "K-means · 异常分数",
+      "metrics": [
+        {
+          "name": "macroF1",
+          "model": 0.9596831850283828,
+          "baseline": 0.8771817600292424
+        }
+      ],
+      "training": 148,
+      "test": 1920,
+      "htmlBytes": 230790,
+      "zipBytes": 80963
+    },
+    {
+      "id": "geology-map-elements",
+      "title": "地质图件要素提取",
+      "sceneId": "g3",
+      "stage": "geology",
+      "method": "图例学习 · 最近类中心",
+      "metrics": [
+        {
+          "name": "macroF1",
+          "model": 0.8995207558143087,
+          "baseline": 0.5121320245284019
+        }
+      ],
+      "training": 148,
+      "test": 1920,
+      "htmlBytes": 233023,
+      "zipBytes": 80897
+    },
+    {
+      "id": "geology-lineament",
+      "title": "构造线候选提取",
+      "sceneId": "g1",
+      "stage": "geology",
+      "method": "逻辑回归 · 线状特征",
+      "metrics": [
+        {
+          "name": "macroF1",
+          "model": 0.9517916163220164,
+          "baseline": 0.9393901130121851
+        }
+      ],
+      "training": 148,
+      "test": 1920,
+      "htmlBytes": 229848,
+      "zipBytes": 80738
+    },
+    {
+      "id": "geology-lithology",
+      "title": "遥感岩性识别",
+      "sceneId": "g1",
+      "stage": "geology",
+      "method": "kNN 监督分类",
+      "metrics": [
+        {
+          "name": "macroF1",
+          "model": 1,
+          "baseline": 0.8034884310871696
+        }
+      ],
+      "training": 148,
+      "test": 1920,
+      "htmlBytes": 229892,
+      "zipBytes": 80902
+    },
+    {
+      "id": "geology-fractures",
+      "title": "露头裂缝统计",
+      "sceneId": "g4",
+      "stage": "geology",
+      "method": "逻辑回归 · 骨架统计",
+      "metrics": [
+        {
+          "name": "macroF1",
+          "model": 0.9452710011843697,
+          "baseline": 0.9366734190373359
+        }
+      ],
+      "training": 148,
+      "test": 1920,
+      "htmlBytes": 229716,
+      "zipBytes": 80665
+    },
+    {
+      "id": "eor-ai",
+      "title": "压裂方案代理模型筛选",
+      "sceneId": "e1",
+      "stage": "eor",
+      "method": "二次响应代理模型 · 约束搜索",
+      "metrics": [
+        {
+          "name": "独立测试 RMSE",
+          "model": 4.615941844064118,
+          "baseline": 8.550234979467394,
+          "better": "lower"
+        }
+      ],
+      "training": 180,
+      "test": 120,
+      "htmlBytes": 225782,
+      "zipBytes": 79624
+    },
+    {
+      "id": "completion-ai",
+      "title": "完井方式相似案例优选",
+      "sceneId": "co1",
+      "stage": "completion",
+      "method": "kNN · 历史方案分类",
+      "metrics": [
+        {
+          "name": "独立测试宏 F1",
+          "model": 0.8857214680744092,
+          "baseline": 0.573866000832293,
+          "better": "higher"
+        }
+      ],
+      "training": 180,
+      "test": 120,
+      "htmlBytes": 225958,
+      "zipBytes": 79524
+    },
+    {
+      "id": "perforation-ai",
+      "title": "射孔参数代理模型优选",
+      "sceneId": "p1",
+      "stage": "perforation",
+      "method": "二次特征岭回归 · 约束网格搜索",
+      "metrics": [
+        {
+          "name": "独立测试 RMSE",
+          "model": 2.837810642089298,
+          "baseline": 5.6564842046044745,
+          "better": "lower"
+        }
+      ],
+      "training": 180,
+      "test": 120,
+      "htmlBytes": 225630,
+      "zipBytes": 79458
+    },
+    {
+      "id": "mudlogging-ai",
+      "title": "岩屑特征智能分类",
+      "sceneId": "m1",
+      "stage": "mudlogging",
+      "method": "kNN · 标准化特征近邻投票",
+      "metrics": [
+        {
+          "name": "独立测试宏 F1",
+          "model": 1,
+          "baseline": 0.9324786324786324,
+          "better": "higher"
+        }
+      ],
+      "training": 180,
+      "test": 120,
+      "htmlBytes": 225656,
+      "zipBytes": 79423
+    },
+    {
+      "id": "welllog-ai",
+      "title": "多曲线岩性智能识别",
+      "sceneId": "w4",
+      "stage": "welllog",
+      "method": "kNN · 多曲线融合分类",
+      "metrics": [
+        {
+          "name": "独立测试宏 F1",
+          "model": 1,
+          "baseline": 0.5573770491803279,
+          "better": "higher"
+        }
+      ],
+      "training": 180,
+      "test": 120,
+      "htmlBytes": 225673,
+      "zipBytes": 79520
+    },
+    {
+      "id": "firstbreak-ai",
+      "title": "初至波智能拾取",
+      "sceneId": "s3",
+      "stage": "seismic",
+      "method": "逻辑回归 · 波形窗口分类",
+      "metrics": [
+        {
+          "name": "初至平均绝对误差（采样点）",
+          "model": 2.6666666666666665,
+          "baseline": 1.6666666666666667,
+          "better": "lower"
+        }
+      ],
+      "training": 1288,
+      "test": 552,
+      "htmlBytes": 225709,
+      "zipBytes": 79535
+    },
+    {
+      "id": "transport-ai",
+      "title": "管道多传感器异常检测",
+      "sceneId": "t1",
+      "stage": "transport",
+      "method": "PCA 正常子空间 · 重构残差",
+      "metrics": [
+        {
+          "name": "独立测试宏 F1",
+          "model": 1,
+          "baseline": 0.46791862284820035,
+          "better": "higher"
+        }
+      ],
+      "training": 210,
+      "test": 160,
+      "htmlBytes": 226498,
+      "zipBytes": 79637
+    },
+    {
+      "id": "production-ai",
+      "title": "单井产量滚动预测",
+      "sceneId": "pr2",
+      "stage": "production",
+      "method": "自回归特征 · 岭回归",
+      "metrics": [
+        {
+          "name": "滚动一步预测 RMSE",
+          "model": 0.6420415030527856,
+          "baseline": 0.7597257070323912,
+          "better": "lower"
+        }
+      ],
+      "training": 100,
+      "test": 66,
+      "htmlBytes": 227381,
+      "zipBytes": 79662
+    },
+    {
+      "id": "drilling-ai",
+      "title": "钻速多变量预测",
+      "sceneId": "d1",
+      "stage": "drilling",
+      "method": "岭回归 · 多变量监督学习",
+      "metrics": [
+        {
+          "name": "独立测试 RMSE",
+          "model": 3.2134040374886768,
+          "baseline": 19.262629200244035,
+          "better": "lower"
+        }
+      ],
+      "training": 180,
+      "test": 120,
+      "htmlBytes": 225715,
+      "zipBytes": 79688
+    }
+  ]
+}

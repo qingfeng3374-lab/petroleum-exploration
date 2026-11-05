@@ -1,0 +1,612 @@
+{
+  "result": [
+    {
+      "id": "workover-ai",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-wo4",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-wo5",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-wo3",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-tubing-pit",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-leak-depth",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-sand-release",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-wo2",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "refining-ai",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-r2",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-r4",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-distillation",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-r1",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-blending",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-fouling",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-r3",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-vdl",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-c3",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-c4",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-cement-contamination",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-cement-time",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-c2",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "cementing-ai",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-geochem-background",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "geology-geochem",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "geology-map-elements",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-symbols",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "geology-lineament",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-mineral",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "geology-lithology",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "geology-fractures",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-co2",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-e3",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-falloff",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "eor-ai",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-e2",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-e5",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-polymer",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-e4",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-inflow",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "completion-ai",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-co3",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-seal",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-co2",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-co4",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-screen",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "perforation-ai",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-shot-acoustic",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-p2",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-charge-tradeoff",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-p3",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-p4",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-underbalance",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "mudlogging-ai",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-lag-depth",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-cuttings-mixture",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-m5",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-m2",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-gas-baseline",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-m3",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-m4",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-w2",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "welllog-ai",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-fluid",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-w3",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-nmr",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-shale",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-w5",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-w1",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-avo",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-s4",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "firstbreak-ai",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-horizon-track",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-s1",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-s2",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-s5",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-velocity",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-t5",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-compressor",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-station-balance",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-t4",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-pig-condition",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "transport-ai",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-t2",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-t3",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "production-ai",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-watercut",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-pr1",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-pump-energy",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-pr3",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-gaslift",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-pr4",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-pr5",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-d2",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-hole-cleaning",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-d3",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-mse",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-d5",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "scene-d4",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "learn-torsion",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    },
+    {
+      "id": "drilling-ai",
+      "standalone": true,
+      "newImport": true,
+      "oldImport": true
+    }
+  ],
+  "errors": [],
+  "visibleCases": 102
+}

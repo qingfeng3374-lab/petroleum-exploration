@@ -1,0 +1,60 @@
+{
+  "base": "http://127.0.0.1:4173",
+  "results": [
+    {
+      "test": "preference-persistence",
+      "passed": true
+    },
+    {
+      "test": "case-preferences",
+      "id": "geology-geochem",
+      "parametersPreserved": true,
+      "exportsIdentical": true
+    },
+    {
+      "test": "case-preferences",
+      "id": "geology-map-elements",
+      "parametersPreserved": true,
+      "exportsIdentical": true
+    },
+    {
+      "test": "case-preferences",
+      "id": "geology-lineament",
+      "parametersPreserved": true,
+      "exportsIdentical": true
+    },
+    {
+      "test": "case-preferences",
+      "id": "geology-lithology",
+      "parametersPreserved": true,
+      "exportsIdentical": true
+    },
+    {
+      "test": "case-preferences",
+      "id": "geology-fractures",
+      "parametersPreserved": true,
+      "exportsIdentical": true
+    },
+    {
+      "test": "legacy-welllog-preferences",
+      "passed": true
+    },
+    {
+      "test": "manual-case",
+      "validation": true,
+      "sanitized": true,
+      "workflow": true,
+      "demo": true,
+      "persistence": true,
+      "zipExport": true,
+      "reimport": true,
+      "metadataEdit": true
+    },
+    {
+      "test": "standalone-preferences",
+      "passed": true
+    }
+  ],
+  "missing": [],
+  "errors": []
+}

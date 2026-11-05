@@ -1,0 +1,61 @@
+{
+  "base": "http://127.0.0.1:4173/",
+  "results": [
+    {
+      "test": "panorama-and-method-connections",
+      "stages": 13,
+      "countsMatchSource": true
+    },
+    {
+      "test": "live-case-preview",
+      "id": "geology-geochem",
+      "noiseChangesComputedImage": true,
+      "keyboardInspection": true
+    },
+    {
+      "test": "live-case-preview",
+      "id": "geology-map-elements",
+      "noiseChangesComputedImage": true,
+      "keyboardInspection": true
+    },
+    {
+      "test": "live-case-preview",
+      "id": "geology-lineament",
+      "noiseChangesComputedImage": true,
+      "keyboardInspection": true
+    },
+    {
+      "test": "live-case-preview",
+      "id": "geology-lithology",
+      "noiseChangesComputedImage": true,
+      "keyboardInspection": true
+    },
+    {
+      "test": "live-case-preview",
+      "id": "geology-fractures",
+      "noiseChangesComputedImage": true,
+      "keyboardInspection": true
+    },
+    {
+      "test": "responsive-english",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "test": "responsive-english",
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "test": "responsive-english",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "test": "mobile-navigation-and-welllog",
+      "passed": true
+    }
+  ],
+  "fontIssues": [],
+  "errors": []
+}

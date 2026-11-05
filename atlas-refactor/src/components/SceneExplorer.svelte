@@ -1,0 +1,16 @@
+<script lang="ts">
+ import {tr} from '../services/preferences';
+ export let stages:any[],methods:Record<string,any>,cases:any[],mode:string,id:string;
+ let query='',method='',difficulty='',stageFilter='',previous='';
+ $: routeKey=mode+'/'+id;
+ $: if(routeKey!==previous){previous=routeKey;const p=new URLSearchParams(location.hash.split('?')[1]||'');query=p.get('q')||'';method=p.get('method')||'';difficulty=p.get('difficulty')||'';stageFilter=p.get('stage')||''}
+ $: all=stages.flatMap(st=>st.scenes.map((s:any)=>({...s,stageId:st.id,stageName:st.name})));
+ $: base=mode==='stage'?all.filter(s=>s.stageId===id):all.filter(s=>s.methods.includes(id));
+ $: list=base.filter(s=>(!query||JSON.stringify(s).toLowerCase().includes(query.toLowerCase()))&&(!method||s.methods.includes(method))&&(!difficulty||s.diff===$tr(difficulty))&&(!stageFilter||s.stageId===stageFilter));
+ $: groups=stages.map(st=>({...st,matches:list.filter(s=>s.stageId===st.id)})).filter(st=>st.matches.length);
+ function sync(){queueMicrotask(()=>{const p=new URLSearchParams();if(query)p.set('q',query);if(method)p.set('method',method);if(difficulty)p.set('difficulty',difficulty);if(stageFilter)p.set('stage',stageFilter);history.replaceState(history.state,'','#/'+mode+'/'+id+(p.size?'?'+p:''))})}
+ function reset(){query='';method='';difficulty='';stageFilter='';sync()}
+</script>
+<div class="filters scene-filters"><label class="search-filter"><span>{$tr('搜索场景')}</span><input aria-label={$tr('搜索场景')} placeholder={$tr('搜索场景、数据或介入点…')} bind:value={query} oninput={sync}/></label>{#if mode==='stage'}<label><span>{$tr('智能方法')}</span><select aria-label={$tr('筛选方法')} bind:value={method} onchange={sync}><option value="">{$tr('全部方法')}</option>{#each Object.entries(methods) as [key,m]}<option value={key}>{m.name}</option>{/each}</select></label>{:else}<label><span>{$tr('作业环节')}</span><select aria-label={$tr('筛选环节')} bind:value={stageFilter} onchange={sync}><option value="">{$tr('全部环节')}</option>{#each stages as st}<option value={st.id}>{st.name}</option>{/each}</select></label>{/if}<label><span>{$tr('技术难度')}</span><select aria-label={$tr('筛选难度')} bind:value={difficulty} onchange={sync}><option value="">{$tr('全部难度')}</option>{#each ['低','中','高'] as d}<option value={d}>{$tr(d)}</option>{/each}</select></label><button onclick={reset}>{$tr('清除筛选')}</button><span role="status">{list.length} / {base.length} {$tr('个场景')}</span></div>
+{#each groups as group}<section class="scene-result-group">{#if mode==='method'}<div class="result-group-heading"><h2><a href={'#/stage/'+group.id}>{group.name} ↗</a></h2><span>{group.matches.length} {$tr('个场景')}</span></div>{/if}<div class="scene-list">{#each group.matches as scene}<a href={'#/scene/'+scene.id}><div><small>{scene.stageName} / {scene.id.toUpperCase()}</small><h2>{scene.name}</h2><p>{scene.point||scene.intro}</p><div class="tags">{#each scene.methods as key}<span>{methods[key]?.name}</span>{/each}<span>{$tr('难度：')}{scene.diff}</span></div></div><strong>{cases.filter(c=>c.manifest.sceneId===scene.id).length||$tr('待补充')}<small>{$tr('案例 ↗')}</small></strong></a>{/each}</div></section>{/each}
+{#if !list.length}<div class="empty-result" role="status"><h3>{$tr('暂无匹配场景')}</h3><p>{$tr('换个关键词，或清除筛选重新探索。')}</p><button onclick={reset}>{$tr('清除筛选')}</button></div>{/if}

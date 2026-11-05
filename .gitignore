@@ -1,0 +1,39 @@
+# Local report, recording and visual QA workspaces
+/.report-work/
+/.visual-work/
+/课程提交材料_*/
+
+# Dependencies, bundler caches and build output
+node_modules/
+.vite/
+.cache/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Browser test output
+playwright-report/
+test-results/
+blob-report/
+
+# Local configuration and credentials; keep shareable examples
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Logs, editor settings and OS temporary files
+*.log
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+~$*
+*.tmp

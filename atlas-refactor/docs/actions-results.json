@@ -1,0 +1,112 @@
+{
+  "base": "http://127.0.0.1:4173/",
+  "results": [
+    {
+      "test": "visible-html-download",
+      "file": "遥感岩性识别.html",
+      "passed": true
+    },
+    {
+      "test": "history",
+      "skipTabs": true,
+      "survivesReload": true,
+      "selectionPreserved": true,
+      "forwardAndBranch": true
+    },
+    {
+      "test": "deep-link-fallback",
+      "passed": true
+    },
+    {
+      "test": "local-zip-download",
+      "manifest": true,
+      "html": true,
+      "binaryPreserved": true
+    },
+    {
+      "test": "responsive-actions",
+      "theme": "dark",
+      "language": "zh",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "test": "responsive-actions",
+      "theme": "dark",
+      "language": "zh",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "test": "responsive-actions",
+      "theme": "dark",
+      "language": "zh",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "test": "responsive-actions",
+      "theme": "dark",
+      "language": "en",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "test": "responsive-actions",
+      "theme": "dark",
+      "language": "en",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "test": "responsive-actions",
+      "theme": "dark",
+      "language": "en",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "test": "responsive-actions",
+      "theme": "light",
+      "language": "zh",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "test": "responsive-actions",
+      "theme": "light",
+      "language": "zh",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "test": "responsive-actions",
+      "theme": "light",
+      "language": "zh",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "test": "responsive-actions",
+      "theme": "light",
+      "language": "en",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "test": "responsive-actions",
+      "theme": "light",
+      "language": "en",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "test": "responsive-actions",
+      "theme": "light",
+      "language": "en",
+      "width": 1440,
+      "passed": true
+    }
+  ],
+  "errors": []
+}

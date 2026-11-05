@@ -1,0 +1,17 @@
+node_modules/
+.vite/
+*.log
+
+# Rebuilt from src/cases by npm run build or npm run dev (predev)
+/dist/
+/release/
+/public/cases/
+/public/case-archives/
+/public/examples/
+
+# Generated visual/browser inspection artifacts
+/.visual-work/
+/docs/screenshots/
+/playwright-report/
+/test-results/
+/coverage/

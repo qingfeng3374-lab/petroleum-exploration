@@ -1,0 +1,29 @@
+{
+  "results": [
+    {
+      "theme": "light",
+      "utf8": true,
+      "englishHeading": true,
+      "chartBackground": "rgb(238, 242, 220)"
+    },
+    {
+      "theme": "dark",
+      "utf8": true,
+      "englishHeading": true,
+      "chartBackground": "rgb(26, 44, 33)"
+    },
+    {
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

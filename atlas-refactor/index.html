@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="从地质勘察到加工，探索石油行业的智能化切入点。">
+  <meta name="theme-color" content="#070f19">
+  <script>
+    // Restore appearance before the application bundle and its styles arrive.
+    (function () {
+      var theme = 'dark', language = 'zh';
+      try {
+        theme = localStorage.getItem('atlas-theme') === 'light' ? 'light' : 'dark';
+        language = localStorage.getItem('atlas-language') === 'en' ? 'en' : 'zh';
+      } catch (_) {}
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
+      document.documentElement.style.colorScheme = theme;
+      document.querySelector('meta[name="theme-color"]').content = theme === 'light' ? '#f6f9f4' : '#070f19';
+    })();
+  </script>
+  <style>html{background:var(--bg,#070f19);color-scheme:dark}html[data-theme=light]{background:var(--bg,#f6f9f4);color-scheme:light}</style>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <title>石油勘探开发的智能化可能性地图</title>
+</head>
+<body>
+  <div id="app"></div>
+  <script src="./legacy/assets/core/case-demo-host.js"></script>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

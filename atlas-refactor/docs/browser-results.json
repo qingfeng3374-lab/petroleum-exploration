@@ -1,0 +1,32 @@
+{
+  "report": [
+    {
+      "id": "geology-geochem",
+      "status": "计算完成 · 4 ms · 148 个训练样本 / 1920 个独立测试像元",
+      "changed": true
+    },
+    {
+      "id": "geology-map-elements",
+      "status": "计算完成 · 4 ms · 148 个训练样本 / 1920 个独立测试像元",
+      "changed": true
+    },
+    {
+      "id": "geology-lineament",
+      "status": "计算完成 · 8 ms · 148 个训练样本 / 1920 个独立测试像元",
+      "changed": true
+    },
+    {
+      "id": "geology-lithology",
+      "status": "计算完成 · 35 ms · 148 个训练样本 / 1920 个独立测试像元",
+      "changed": true
+    },
+    {
+      "id": "geology-fractures",
+      "status": "计算完成 · 8 ms · 148 个训练样本 / 1920 个独立测试像元",
+      "changed": true
+    }
+  ],
+  "overflow": false,
+  "errors": [],
+  "legacyImport": true
+}

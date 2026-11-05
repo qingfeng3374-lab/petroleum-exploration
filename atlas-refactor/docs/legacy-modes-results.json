@@ -1,0 +1,21 @@
+{
+  "results": [
+    {
+      "kind": "module",
+      "imported": true
+    },
+    {
+      "kind": "builtin",
+      "imported": true
+    },
+    {
+      "kind": "background",
+      "imported": true
+    },
+    {
+      "kind": "three-model",
+      "rendered": true
+    }
+  ],
+  "errors": []
+}

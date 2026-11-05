@@ -1,0 +1,27 @@
+{
+  "base": "http://127.0.0.1:4173/",
+  "results": [
+    {
+      "test": "corrupt-hidden-list-and-workspace-do-not-white-screen",
+      "passed": true
+    },
+    {
+      "test": "malformed-imports-rejected-and-following-valid-import-usable",
+      "passed": true
+    },
+    {
+      "test": "invalid-stored-case-skipped-with-visible-message",
+      "passed": true
+    },
+    {
+      "test": "seven-representative-error-views-english-and-light-theme",
+      "passed": true
+    },
+    {
+      "test": "browsing-survives-unavailable-local-storage",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "clipped": []
+}

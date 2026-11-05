@@ -1,0 +1,371 @@
+{
+  "base": "http://127.0.0.1:4173/",
+  "results": [
+    {
+      "id": "learn-tubing-pit",
+      "sceneId": "wo3",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-leak-depth",
+      "sceneId": "wo3",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-sand-release",
+      "sceneId": "wo2",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-distillation",
+      "sceneId": "r1",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-blending",
+      "sceneId": "r1",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-fouling",
+      "sceneId": "r3",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-vdl",
+      "sceneId": "c1",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-cement-contamination",
+      "sceneId": "c3",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-cement-time",
+      "sceneId": "c2",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-geochem-background",
+      "sceneId": "g2",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-symbols",
+      "sceneId": "g3",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-mineral",
+      "sceneId": "g1",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-co2",
+      "sceneId": "e3",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-falloff",
+      "sceneId": "e2",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-polymer",
+      "sceneId": "e3",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-inflow",
+      "sceneId": "co4",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-seal",
+      "sceneId": "co3",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-screen",
+      "sceneId": "co1",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-shot-acoustic",
+      "sceneId": "p4",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-charge-tradeoff",
+      "sceneId": "p3",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-underbalance",
+      "sceneId": "p4",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-lag-depth",
+      "sceneId": "m4",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-cuttings-mixture",
+      "sceneId": "m1",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-gas-baseline",
+      "sceneId": "m2",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-fluid",
+      "sceneId": "w4",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-nmr",
+      "sceneId": "w2",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-shale",
+      "sceneId": "w2",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-avo",
+      "sceneId": "s4",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-horizon-track",
+      "sceneId": "s1",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-velocity",
+      "sceneId": "s3",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-compressor",
+      "sceneId": "t3",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-station-balance",
+      "sceneId": "t1",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-pig-condition",
+      "sceneId": "t2",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-watercut",
+      "sceneId": "pr2",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-pump-energy",
+      "sceneId": "pr1",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-gaslift",
+      "sceneId": "pr3",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-hole-cleaning",
+      "sceneId": "d2",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-mse",
+      "sceneId": "d1",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "id": "learn-torsion",
+      "sceneId": "d4",
+      "threeViews": true,
+      "workflowSteps": 4,
+      "recomputed": true,
+      "sources": true,
+      "preferenceStatePreserved": true
+    },
+    {
+      "test": "all-thirteen-chapters-and-case-search",
+      "passed": true
+    },
+    {
+      "test": "research-task-responsive-layouts",
+      "widths": [
+        390,
+        768,
+        1440
+      ],
+      "passed": true
+    }
+  ],
+  "missing": [],
+  "errors": []
+}

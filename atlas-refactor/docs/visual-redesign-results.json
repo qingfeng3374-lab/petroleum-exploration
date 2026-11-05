@@ -1,0 +1,48 @@
+{
+  "base": "http://127.0.0.1:4173/",
+  "results": [
+    {
+      "test": "terrain",
+      "webgl": true,
+      "explode": true,
+      "keyboard": true,
+      "layerSelection": true
+    },
+    {
+      "test": "home-navigation",
+      "stageSelection": true,
+      "methodSelection": true,
+      "caseSelection": true
+    },
+    {
+      "test": "case-tools",
+      "workflowPlayback": true,
+      "compareSplit": true,
+      "compareDrag": true,
+      "embeddedMotion": true
+    },
+    {
+      "test": "dialog",
+      "focusTrap": true,
+      "escape": true,
+      "returnFocus": true
+    },
+    {
+      "test": "responsive",
+      "width": 390,
+      "homeOverflow": false,
+      "caseOverflow": false
+    },
+    {
+      "test": "responsive",
+      "width": 768,
+      "homeOverflow": false,
+      "caseOverflow": false
+    },
+    {
+      "test": "reduced-motion",
+      "respected": true
+    }
+  ],
+  "errors": []
+}

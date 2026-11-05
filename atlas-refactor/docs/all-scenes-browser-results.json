@@ -1,0 +1,339 @@
+{
+  "base": "http://127.0.0.1:4173/",
+  "results": [
+    {
+      "sceneId": "wo4",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "wo5",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "wo3",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "wo2",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "r2",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "r4",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "r1",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "r3",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "c3",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "c4",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "c2",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "e3",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "e2",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "e5",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "e4",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "co3",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "co2",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "co4",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "p2",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "p3",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "p4",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "m5",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "m2",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "m3",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "m4",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "w2",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "w3",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "w5",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "w1",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "s4",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "s1",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "s2",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "s5",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "t5",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "t4",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "t2",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "t3",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "pr1",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "pr3",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "pr4",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "pr5",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "d2",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "d3",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "d5",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "sceneId": "d4",
+      "whatWhyHow": true,
+      "computedNoiseChange": true,
+      "workflowSteps": 4,
+      "threeViews": true
+    },
+    {
+      "test": "complete-coverage-and-search",
+      "passed": true
+    },
+    {
+      "test": "control-mode-comparison-and-source-quoted-report-editing",
+      "passed": true
+    },
+    {
+      "test": "all-task-family-responsive-layouts",
+      "widths": [
+        390,
+        768,
+        1440
+      ],
+      "passed": true
+    }
+  ],
+  "missing": [],
+  "errors": []
+}

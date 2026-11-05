@@ -1,0 +1,254 @@
+{
+  "checkedAt": "2026-11-04T04:26:28.295Z",
+  "total": 41,
+  "reachable": 37,
+  "broken": 0,
+  "unverified": 4,
+  "results": [
+    {
+      "url": "https://www.eia.gov/energyexplained/oil-and-petroleum-products/refining-crude-oil-the-refining-process.php",
+      "status": 200,
+      "finalUrl": "https://www.eia.gov/energyexplained/oil-and-petroleum-products/refining-crude-oil-the-refining-process.php",
+      "state": "reachable"
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/neighbors.html",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/neighbors.html",
+      "state": "reachable"
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression-and-classification",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/linear_model.html",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.slb.com/-/media/files/oilfield-review/2-casing-corr-2-english",
+      "status": 200,
+      "finalUrl": "https://www.slb.com/-/media/files/oilfield-review/2-casing-corr-2-english",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.slb.com/resource-library/technical-paper/wi/spe-166531",
+      "status": 200,
+      "finalUrl": "https://www.slb.com/resource-library/technical-paper/wi/spe-166531",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-production-logging",
+      "status": 200,
+      "finalUrl": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-production-logging",
+      "state": "reachable"
+    },
+    {
+      "url": "https://glossary.slb.com/en/terms/v/variable-density_log",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/en/terms/v/variable-density_log",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.energy.gov/cmei/femp/water-efficient-technology-opportunity-side-stream-filtration-cooling-towers",
+      "status": 200,
+      "finalUrl": "https://www.energy.gov/cmei/femp/water-efficient-technology-opportunity-side-stream-filtration-cooling-towers",
+      "state": "reachable"
+    },
+    {
+      "url": "https://glossary.slb.com/en/terms/s/spacer_fluid",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/en/terms/s/spacer_fluid",
+      "state": "reachable"
+    },
+    {
+      "url": "https://glossary.slb.com/en/terms/t/thickening_time",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/en/terms/t/thickening_time",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.usgs.gov/publications/geochemical-and-mineralogical-maps-interpretation-soils-conterminous-united-states",
+      "status": 403,
+      "finalUrl": "https://www.usgs.gov/publications/geochemical-and-mineralogical-maps-interpretation-soils-conterminous-united-states",
+      "state": "unverified"
+    },
+    {
+      "url": "https://glossary.slb.com/en/Terms/m/minimum_miscibility_pressure.aspx",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/en/Terms/m/minimum_miscibility_pressure.aspx",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.usgs.gov/labs/spectroscopy-lab/usgs-spectral-library",
+      "status": 403,
+      "finalUrl": "https://www.usgs.gov/labs/spectroscopy-lab/usgs-spectral-library",
+      "state": "unverified"
+    },
+    {
+      "url": "https://glossary.slb.com/en/terms/p/polymer",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/en/terms/p/polymer",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.usgs.gov/programs/national-cooperative-geologic-mapping-program/science/national-geologic-map-database-0",
+      "status": 403,
+      "finalUrl": "https://www.usgs.gov/programs/national-cooperative-geologic-mapping-program/science/national-geologic-map-database-0",
+      "state": "unverified"
+    },
+    {
+      "url": "https://itl.nist.gov/div898/software/dataplot/refman2/auxillar/mad.htm",
+      "status": 200,
+      "finalUrl": "https://itl.nist.gov/div898/software/dataplot/refman2/auxillar/mad.htm",
+      "state": "reachable"
+    },
+    {
+      "url": "https://glossary.slb.com/en/terms/f/flow_profile",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/en/terms/f/flow_profile",
+      "state": "reachable"
+    },
+    {
+      "url": "https://glossary.slb.com/en/terms/s/sieve_analysis",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/en/terms/s/sieve_analysis",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.energy.gov/hgeo/enhanced-oil-recovery",
+      "status": 200,
+      "finalUrl": "https://www.energy.gov/hgeo/enhanced-oil-recovery",
+      "state": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/tutorial/fft.html",
+      "status": 200,
+      "finalUrl": "https://docs.scipy.org/doc/scipy/tutorial/fft.html",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-mud-logging",
+      "status": 200,
+      "finalUrl": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-mud-logging",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.slb.com/products-and-services/innovating-in-oil-and-gas/completions/well-completions/perforating",
+      "status": 200,
+      "finalUrl": "https://www.slb.com/products-and-services/innovating-in-oil-and-gas/completions/well-completions/perforating",
+      "state": "reachable"
+    },
+    {
+      "url": "https://glossary.slb.com/en/terms/w/water-cut_meter",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/en/terms/w/water-cut_meter",
+      "state": "reachable"
+    },
+    {
+      "url": "https://glossary.slb.com/en/terms/n/nmr",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/en/terms/n/nmr",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.slb.com/videos/bluepack-rh",
+      "status": 200,
+      "finalUrl": "https://www.slb.com/videos/bluepack-rh",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-log-interpretation",
+      "status": 200,
+      "finalUrl": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-log-interpretation",
+      "state": "reachable"
+    },
+    {
+      "url": "https://glossary.slb.com/terms/n/normal_moveout",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/terms/n/normal_moveout",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.slb.com/resource-library/technical-paper/pe/spe-143997",
+      "status": 200,
+      "finalUrl": "https://www.slb.com/resource-library/technical-paper/pe/spe-143997",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.slb.com/products-and-services/delivering-digital-at-scale/software/petrel-subsurface-software/petrel/petrel-geophysics/petrel-seismic-interpretation",
+      "status": 200,
+      "finalUrl": "https://www.slb.com/products-and-services/delivering-digital-at-scale/software/petrel-subsurface-software/petrel/petrel-geophysics/petrel-seismic-interpretation",
+      "state": "reachable"
+    },
+    {
+      "url": "https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression",
+      "status": 200,
+      "finalUrl": "https://scikit-learn.org/stable/modules/linear_model.html",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.slb.com/products-and-services/innovating-in-oil-and-gas/reservoir-characterization/seismic/subsurface-imaging/seismic-reservoir-characterization/seismic-inversion/avo-seismic-inversion",
+      "status": 200,
+      "finalUrl": "https://www.slb.com/products-and-services/innovating-in-oil-and-gas/reservoir-characterization/seismic/subsurface-imaging/seismic-reservoir-characterization/seismic-inversion/avo-seismic-inversion",
+      "state": "reachable"
+    },
+    {
+      "url": "https://glossary.slb.com/terms/w/water_cut",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/terms/w/water_cut",
+      "state": "reachable"
+    },
+    {
+      "url": "https://glossary.slb.com/Terms/d/dynamometer_card.aspx",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/Terms/d/dynamometer_card.aspx",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.slb.com/resource-library/article/valve-insights/how-it-works-pipeline-pigging",
+      "status": 200,
+      "finalUrl": "https://www.slb.com/resource-library/article/valve-insights/how-it-works-pipeline-pigging",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-gas-lift",
+      "status": 200,
+      "finalUrl": "https://www.slb.com/resource-library/oilfield-review/defining-series/defining-gas-lift",
+      "state": "reachable"
+    },
+    {
+      "url": "https://primis.phmsa.dot.gov/stakeholder-comms/factsheets/fsleakdetectionsystems/",
+      "status": 200,
+      "finalUrl": "https://primis.phmsa.dot.gov/stakeholder-comms/factsheets/fsleakdetectionsystems/",
+      "state": "reachable"
+    },
+    {
+      "url": "https://glossary.slb.com/en/terms/h/hole_cleaning",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/en/terms/h/hole_cleaning",
+      "state": "reachable"
+    },
+    {
+      "url": "https://glossary.slb.com/en/terms/m/mechanical_specific_energy",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/en/terms/m/mechanical_specific_energy",
+      "state": "reachable"
+    },
+    {
+      "url": "https://www.bc-er.ca/files/operations-documentation/Reservoir-Management/Well-Testing/Diagnostic-Fracture-Injection-Test-DFIT-Recommendations_revised-20Jul2023.pdf",
+      "state": "unverified",
+      "reason": "UND_ERR_CONNECT_TIMEOUT"
+    },
+    {
+      "url": "https://dam.bakerhughes.com/m/39739ab6ba6a9442/original/Q1-2022-Orbit-Article-Nitric-Acid-Article.pdf",
+      "status": 200,
+      "finalUrl": "https://dam.bakerhughes.com/m/39739ab6ba6a9442/original/Q1-2022-Orbit-Article-Nitric-Acid-Article.pdf",
+      "state": "reachable"
+    },
+    {
+      "url": "https://glossary.slb.com/en/terms/s/stick_and_slip",
+      "status": 200,
+      "finalUrl": "https://glossary.slb.com/en/terms/s/stick_and_slip",
+      "state": "reachable"
+    }
+  ]
+}

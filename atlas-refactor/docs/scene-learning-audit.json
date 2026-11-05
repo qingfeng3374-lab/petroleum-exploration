@@ -1,0 +1,3283 @@
+{
+  "version": "4.0.0",
+  "scenes": 61,
+  "covered": 61,
+  "aiCases": 101,
+  "totalCases": 102,
+  "researchCases": 39,
+  "sceneEngineCases": 84,
+  "pending": [],
+  "operations": [
+    {
+      "id": "geology",
+      "name": "地质勘察",
+      "total": 4,
+      "covered": 4
+    },
+    {
+      "id": "seismic",
+      "name": "物探",
+      "total": 5,
+      "covered": 5
+    },
+    {
+      "id": "drilling",
+      "name": "钻井",
+      "total": 5,
+      "covered": 5
+    },
+    {
+      "id": "mudlogging",
+      "name": "录井",
+      "total": 5,
+      "covered": 5
+    },
+    {
+      "id": "welllog",
+      "name": "测井",
+      "total": 5,
+      "covered": 5
+    },
+    {
+      "id": "cementing",
+      "name": "固井",
+      "total": 4,
+      "covered": 4
+    },
+    {
+      "id": "completion",
+      "name": "完井",
+      "total": 4,
+      "covered": 4
+    },
+    {
+      "id": "perforation",
+      "name": "射孔",
+      "total": 4,
+      "covered": 4
+    },
+    {
+      "id": "production",
+      "name": "采油",
+      "total": 5,
+      "covered": 5
+    },
+    {
+      "id": "workover",
+      "name": "修井",
+      "total": 5,
+      "covered": 5
+    },
+    {
+      "id": "eor",
+      "name": "增采",
+      "total": 5,
+      "covered": 5
+    },
+    {
+      "id": "transport",
+      "name": "运输",
+      "total": 5,
+      "covered": 5
+    },
+    {
+      "id": "refining",
+      "name": "加工",
+      "total": 5,
+      "covered": 5
+    }
+  ],
+  "cases": [
+    {
+      "id": "scene-wo4",
+      "sceneId": "wo4",
+      "title": "修井作业风险预警",
+      "family": "risk",
+      "method": "多指标逻辑回归风险识别",
+      "reference": 190,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.9645490640952921,
+            "baseline": 0.6828030450907672,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.968,
+            "baseline": 0.688,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301350,
+      "zipBytes": 103136
+    },
+    {
+      "id": "scene-wo5",
+      "sceneId": "wo5",
+      "title": "修井周期预测",
+      "family": "regression",
+      "method": "二次特征岭回归＋独立区间校准",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.478816378675191,
+            "baseline": 21.18721629445741,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9307692307692308,
+            "baseline": 0.9076923076923077,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 300871,
+      "zipBytes": 102849
+    },
+    {
+      "id": "scene-wo3",
+      "sceneId": "wo3",
+      "title": "套管损伤智能识别",
+      "family": "raster",
+      "method": "像素观测特征＋逻辑回归",
+      "reference": 576,
+      "test": 1728,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.994538800432345,
+            "baseline": 1,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.9988425925925926,
+            "baseline": 1,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301248,
+      "zipBytes": 103099
+    },
+    {
+      "id": "learn-tubing-pit",
+      "sceneId": "wo3",
+      "title": "油管点蚀深度代理估计",
+      "family": "regression",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.7846525224208307,
+            "baseline": 19.489612970239893,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.848,
+            "baseline": 0.84,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303443,
+      "zipBytes": 103750
+    },
+    {
+      "id": "learn-leak-depth",
+      "sceneId": "wo3",
+      "title": "温度剖面泄漏候选定位",
+      "family": "regression",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 6.91584465335336,
+            "baseline": 25.832826963294764,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.928,
+            "baseline": 0.936,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303829,
+      "zipBytes": 103833
+    },
+    {
+      "id": "learn-sand-release",
+      "sceneId": "wo2",
+      "title": "砂卡解卡方式相似检索",
+      "family": "graph",
+      "method": "适配约束图＋标准化近邻排序",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.895945308816596,
+            "baseline": 0.17834394904458598,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.9043478260869565,
+            "baseline": 0.3652173913043478,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303480,
+      "zipBytes": 103713
+    },
+    {
+      "id": "scene-wo2",
+      "sceneId": "wo2",
+      "title": "落物打捞工具智能选型",
+      "family": "graph",
+      "method": "关系图约束过滤＋历史近邻排序",
+      "reference": 180,
+      "test": 120,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.8764920886453945,
+            "baseline": 0.16666666666666666,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.875,
+            "baseline": 0.3333333333333333,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301753,
+      "zipBytes": 103231
+    },
+    {
+      "id": "scene-r2",
+      "sceneId": "r2",
+      "title": "催化裂化产物预测",
+      "family": "multi",
+      "method": "多输出二次岭回归",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.6611720570216736,
+            "baseline": 2.741065863524303,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.8769230769230769,
+            "baseline": 0.9153846153846154,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.6435152215647284,
+            "baseline": 3.114903068049198,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.8769230769230769,
+            "baseline": 0.9153846153846154,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.8834933967306011,
+            "baseline": 3.1488439299048907,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9153846153846154,
+            "baseline": 0.8307692307692308,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.7220525639986739,
+            "baseline": 3.097019125721299,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9153846153846154,
+            "baseline": 0.8153846153846154,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.7251539207085165,
+            "baseline": 3.1292991770135528,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.8307692307692308,
+            "baseline": 0.9230769230769231,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 302339,
+      "zipBytes": 103360
+    },
+    {
+      "id": "scene-r4",
+      "sceneId": "r4",
+      "title": "化验数据智能审核",
+      "family": "anomaly",
+      "method": "正常子空间 PCA＋重构残差",
+      "reference": 230,
+      "test": 170,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.4444444444444444,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.8,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301535,
+      "zipBytes": 103153
+    },
+    {
+      "id": "learn-distillation",
+      "sceneId": "r1",
+      "title": "原油馏程分位点预测",
+      "family": "multi",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.877952069419202,
+            "baseline": 22.925634307368988,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.944,
+            "baseline": 0.92,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.5117687859923215,
+            "baseline": 30.336383338402854,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.936,
+            "baseline": 0.936,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.970371503441414,
+            "baseline": 35.53890939258639,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.944,
+            "baseline": 0.944,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303410,
+      "zipBytes": 103918
+    },
+    {
+      "id": "scene-r1",
+      "sceneId": "r1",
+      "title": "常减压装置操作优化",
+      "family": "optimize",
+      "method": "二次岭回归代理＋约束网格搜索",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.5239603081494453,
+            "baseline": 8.537097083103102,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.8769230769230769,
+            "baseline": 0.9230769230769231,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301346,
+      "zipBytes": 103202
+    },
+    {
+      "id": "learn-blending",
+      "sceneId": "r1",
+      "title": "成品油调和质量资源权衡",
+      "family": "optimize",
+      "method": "双响应岭回归代理＋约束帕累托搜索",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.48387168304667144,
+            "baseline": 4.857362254346357,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.864,
+            "baseline": 0.912,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.7815369555261691,
+            "baseline": 8.278655041761246,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.848,
+            "baseline": 0.84,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303949,
+      "zipBytes": 104059
+    },
+    {
+      "id": "learn-fouling",
+      "sceneId": "r3",
+      "title": "换热器污垢热阻代理估计",
+      "family": "regression",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.3848609113530308,
+            "baseline": 21.694607240713577,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.928,
+            "baseline": 0.856,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303850,
+      "zipBytes": 103813
+    },
+    {
+      "id": "scene-r3",
+      "sceneId": "r3",
+      "title": "炼化设备预测性维护",
+      "family": "regression",
+      "method": "二次特征岭回归＋独立区间校准",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 4.256730123940279,
+            "baseline": 27.293597789197,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9230769230769231,
+            "baseline": 0.8769230769230769,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301651,
+      "zipBytes": 103220
+    },
+    {
+      "id": "learn-vdl",
+      "sceneId": "c1",
+      "title": "变密度波列胶结模式判读",
+      "family": "shape",
+      "method": "多指标观测特征＋kNN",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303423,
+      "zipBytes": 103744
+    },
+    {
+      "id": "scene-c3",
+      "sceneId": "c3",
+      "title": "固井漏失风险预测",
+      "family": "risk",
+      "method": "多指标逻辑回归风险识别",
+      "reference": 190,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.9747321609055993,
+            "baseline": 0.7250258799171843,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.976,
+            "baseline": 0.728,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301544,
+      "zipBytes": 103184
+    },
+    {
+      "id": "scene-c4",
+      "sceneId": "c4",
+      "title": "套管居中度智能评估",
+      "family": "optimize",
+      "method": "二次岭回归代理＋约束网格搜索",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.288704057577676,
+            "baseline": 28.18862978538326,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.823076923076923,
+            "baseline": 0.8923076923076924,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301572,
+      "zipBytes": 103153
+    },
+    {
+      "id": "learn-cement-contamination",
+      "sceneId": "c3",
+      "title": "水泥浆污染状态识别",
+      "family": "classification",
+      "method": "多指标观测特征＋kNN",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.16228070175438597,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.3217391304347826,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 302919,
+      "zipBytes": 103590
+    },
+    {
+      "id": "learn-cement-time",
+      "sceneId": "c2",
+      "title": "水泥浆稠化时间预测",
+      "family": "regression",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.679719728141223,
+            "baseline": 37.697739052623035,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.792,
+            "baseline": 0.776,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303259,
+      "zipBytes": 103641
+    },
+    {
+      "id": "scene-c2",
+      "sceneId": "c2",
+      "title": "注水泥参数优化",
+      "family": "optimize",
+      "method": "二次岭回归代理＋约束网格搜索",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 6.1544620872885325,
+            "baseline": 11.92936429008583,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9230769230769231,
+            "baseline": 0.9230769230769231,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301461,
+      "zipBytes": 103097
+    },
+    {
+      "id": "learn-geochem-background",
+      "sceneId": "g2",
+      "title": "化探多指标稳健背景检测",
+      "family": "anomaly",
+      "method": "正常背景中位数/MAD稳健检测",
+      "reference": 210,
+      "test": 155,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303588,
+      "zipBytes": 103588
+    },
+    {
+      "id": "learn-symbols",
+      "sceneId": "g3",
+      "title": "地质图符号形态分类",
+      "family": "classification",
+      "method": "图形形态特征＋kNN",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.7127847362927487,
+            "baseline": 0.4040108797142045,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.7391304347826086,
+            "baseline": 0.46956521739130436,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303472,
+      "zipBytes": 103849
+    },
+    {
+      "id": "learn-mineral",
+      "sceneId": "g1",
+      "title": "蚀变矿物吸收带识别",
+      "family": "shape",
+      "method": "吸收带特征＋kNN",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303525,
+      "zipBytes": 103604
+    },
+    {
+      "id": "learn-co2",
+      "sceneId": "e3",
+      "title": "CO2驱压力配注响应筛选",
+      "family": "optimize",
+      "method": "双响应岭回归代理＋约束帕累托搜索",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 4.278933414542189,
+            "baseline": 21.892576776311987,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.896,
+            "baseline": 0.952,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.6711646110598244,
+            "baseline": 18.32243815481544,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.92,
+            "baseline": 0.896,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303948,
+      "zipBytes": 103982
+    },
+    {
+      "id": "scene-e3",
+      "sceneId": "e3",
+      "title": "化学驱配方智能筛选",
+      "family": "optimize",
+      "method": "二次岭回归代理＋约束网格搜索",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.256825589713783,
+            "baseline": 13.80922103203451,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9,
+            "baseline": 0.9153846153846154,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301055,
+      "zipBytes": 103104
+    },
+    {
+      "id": "learn-falloff",
+      "sceneId": "e2",
+      "title": "压裂停泵压力形态分级",
+      "family": "shape",
+      "method": "多指标观测特征＋kNN",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303428,
+      "zipBytes": 103837
+    },
+    {
+      "id": "scene-e2",
+      "sceneId": "e2",
+      "title": "压裂裂缝形态预测",
+      "family": "multi",
+      "method": "多输出二次岭回归",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.2094947794699995,
+            "baseline": 43.25667547583602,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.8692307692307693,
+            "baseline": 0.8769230769230769,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.7152273970554108,
+            "baseline": 20.426445444138402,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9,
+            "baseline": 0.9153846153846154,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301103,
+      "zipBytes": 103008
+    },
+    {
+      "id": "scene-e5",
+      "sceneId": "e5",
+      "title": "微生物采油菌群活性预测",
+      "family": "regression",
+      "method": "二次特征岭回归＋独立区间校准",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 8.560889458344814,
+            "baseline": 14.850950859549853,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9461538461538461,
+            "baseline": 0.9,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 302263,
+      "zipBytes": 103421
+    },
+    {
+      "id": "learn-polymer",
+      "sceneId": "e3",
+      "title": "聚合物黏度保持率预测",
+      "family": "regression",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.0806271134020045,
+            "baseline": 13.020497555096359,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.904,
+            "baseline": 0.888,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303588,
+      "zipBytes": 103719
+    },
+    {
+      "id": "scene-e4",
+      "sceneId": "e4",
+      "title": "蒸汽吞吐注采参数优化",
+      "family": "optimize",
+      "method": "二次岭回归代理＋约束网格搜索",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.724421445020233,
+            "baseline": 9.695984739477815,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.8692307692307693,
+            "baseline": 0.9538461538461539,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 300894,
+      "zipBytes": 102911
+    },
+    {
+      "id": "learn-inflow",
+      "sceneId": "co4",
+      "title": "分段流入贡献比例估计",
+      "family": "multi",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.2653669996040353,
+            "baseline": 14.27248561234799,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.904,
+            "baseline": 0.888,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.7659822797184983,
+            "baseline": 13.734959021344606,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.944,
+            "baseline": 0.84,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.72846992379249,
+            "baseline": 12.1027394549208,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.928,
+            "baseline": 0.904,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303015,
+      "zipBytes": 103568
+    },
+    {
+      "id": "scene-co3",
+      "sceneId": "co3",
+      "title": "完井管柱受力智能分析",
+      "family": "regression",
+      "method": "二次特征岭回归＋独立区间校准",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.1861229809451457,
+            "baseline": 33.58477044729268,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.8692307692307693,
+            "baseline": 0.8923076923076924,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301571,
+      "zipBytes": 103133
+    },
+    {
+      "id": "learn-seal",
+      "sceneId": "co3",
+      "title": "封隔器压力衰减模式识别",
+      "family": "shape",
+      "method": "多指标观测特征＋kNN",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303345,
+      "zipBytes": 103803
+    },
+    {
+      "id": "scene-co2",
+      "sceneId": "co2",
+      "title": "射孔参数智能设计",
+      "family": "optimize",
+      "method": "二次岭回归代理＋约束网格搜索",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.3291657526333935,
+            "baseline": 7.807961386419275,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.8153846153846154,
+            "baseline": 0.9153846153846154,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.017544225523068772,
+            "baseline": 0.18488492151811647,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.8538461538461538,
+            "baseline": 0.9230769230769231,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301853,
+      "zipBytes": 103196
+    },
+    {
+      "id": "scene-co4",
+      "sceneId": "co4",
+      "title": "智能完井滑套控制策略",
+      "family": "control",
+      "method": "表格 Q-learning＋动作约束",
+      "reference": 150,
+      "test": 45,
+      "metrics": [
+        [
+          {
+            "name": "累计模拟净收益",
+            "ai": 5.842268867873046,
+            "baseline": -20.652526635633393,
+            "higher": true
+          },
+          {
+            "name": "最终模拟含水比例",
+            "ai": 0.24473964313766916,
+            "baseline": 0.9887396431376696,
+            "higher": false
+          }
+        ]
+      ],
+      "htmlBytes": 301621,
+      "zipBytes": 103294
+    },
+    {
+      "id": "learn-screen",
+      "sceneId": "co1",
+      "title": "防砂筛管粒度适配选型",
+      "family": "graph",
+      "method": "适配约束图＋标准化近邻排序",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.8828277537025572,
+            "baseline": 0.19047619047619047,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.8782608695652174,
+            "baseline": 0.4,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303082,
+      "zipBytes": 103653
+    },
+    {
+      "id": "learn-shot-acoustic",
+      "sceneId": "p4",
+      "title": "射孔声学瞬态模式识别",
+      "family": "shape",
+      "method": "离散傅里叶频带特征＋kNN",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 304660,
+      "zipBytes": 104156
+    },
+    {
+      "id": "scene-p2",
+      "sceneId": "p2",
+      "title": "射孔孔道形态预测",
+      "family": "multi",
+      "method": "多输出二次岭回归",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.0948736250590734,
+            "baseline": 15.24824815651133,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.8,
+            "baseline": 0.9076923076923077,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.6706439243157496,
+            "baseline": 2.865295599434171,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9615384615384616,
+            "baseline": 0.8307692307692308,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301527,
+      "zipBytes": 103075
+    },
+    {
+      "id": "learn-charge-tradeoff",
+      "sceneId": "p3",
+      "title": "射孔弹响应与损伤权衡",
+      "family": "optimize",
+      "method": "双响应岭回归代理＋约束帕累托搜索",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.8291887306694032,
+            "baseline": 17.31245493662777,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.872,
+            "baseline": 0.912,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.7583742477385556,
+            "baseline": 18.877265506873943,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.896,
+            "baseline": 0.896,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303721,
+      "zipBytes": 103988
+    },
+    {
+      "id": "scene-p3",
+      "sceneId": "p3",
+      "title": "射孔弹型智能选型",
+      "family": "graph",
+      "method": "关系图约束过滤＋历史近邻排序",
+      "reference": 180,
+      "test": 120,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.8764920886453945,
+            "baseline": 0.16666666666666666,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.875,
+            "baseline": 0.3333333333333333,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301590,
+      "zipBytes": 103196
+    },
+    {
+      "id": "scene-p4",
+      "sceneId": "p4",
+      "title": "射孔效果智能评估",
+      "family": "regression",
+      "method": "二次特征岭回归＋独立区间校准",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.5417973123468434,
+            "baseline": 19.460448494466398,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.8615384615384616,
+            "baseline": 0.8615384615384616,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301688,
+      "zipBytes": 103020
+    },
+    {
+      "id": "learn-underbalance",
+      "sceneId": "p4",
+      "title": "负压射孔清洁响应预测",
+      "family": "regression",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.0110863092529003,
+            "baseline": 16.727160483807857,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.84,
+            "baseline": 0.816,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303490,
+      "zipBytes": 103715
+    },
+    {
+      "id": "learn-lag-depth",
+      "sceneId": "m4",
+      "title": "岩屑迟到深度校正估计",
+      "family": "regression",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 7.959309338399524,
+            "baseline": 42.27773013954305,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.784,
+            "baseline": 0.848,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303612,
+      "zipBytes": 103767
+    },
+    {
+      "id": "learn-cuttings-mixture",
+      "sceneId": "m1",
+      "title": "岩屑颜色混合组分反演",
+      "family": "multi",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.2159138044837625,
+            "baseline": 29.02845677136399,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.912,
+            "baseline": 0.928,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.533795184481057,
+            "baseline": 21.479924966033423,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.896,
+            "baseline": 0.976,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.4370073258185654,
+            "baseline": 19.64432876260618,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.896,
+            "baseline": 0.936,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303656,
+      "zipBytes": 103862
+    },
+    {
+      "id": "scene-m5",
+      "sceneId": "m5",
+      "title": "录井报告自动生成",
+      "family": "report",
+      "method": "TF-IDF近邻字段识别＋引用式模板",
+      "reference": 180,
+      "test": 100,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.8953626697547111,
+            "baseline": 0.23110661268556004,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.91,
+            "baseline": 0.29,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 302034,
+      "zipBytes": 103334
+    },
+    {
+      "id": "scene-m2",
+      "sceneId": "m2",
+      "title": "气测异常智能解释",
+      "family": "gas",
+      "method": "气测组分特征＋标准化 kNN",
+      "reference": 190,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.203125,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.312,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301295,
+      "zipBytes": 103142
+    },
+    {
+      "id": "learn-gas-baseline",
+      "sceneId": "m2",
+      "title": "气测背景漂移校正代理",
+      "family": "regression",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.710533413348255,
+            "baseline": 19.559447837036007,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.864,
+            "baseline": 0.912,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303179,
+      "zipBytes": 103666
+    },
+    {
+      "id": "scene-m3",
+      "sceneId": "m3",
+      "title": "荧光图像智能判读",
+      "family": "shape",
+      "method": "形态特征＋标准化 kNN",
+      "reference": 150,
+      "test": 105,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301289,
+      "zipBytes": 103105
+    },
+    {
+      "id": "scene-m4",
+      "sceneId": "m4",
+      "title": "钻时曲线地层划分",
+      "family": "boundary",
+      "method": "多尺度窗口特征＋逻辑回归界面检测",
+      "reference": 205,
+      "test": 150,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.969867416633186,
+            "baseline": 0.6376811594202898,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.9866666666666667,
+            "baseline": 0.8933333333333333,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301624,
+      "zipBytes": 103284
+    },
+    {
+      "id": "scene-w2",
+      "sceneId": "w2",
+      "title": "储层参数智能解释",
+      "family": "regression",
+      "method": "二次特征岭回归＋独立区间校准",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.9087909317104998,
+            "baseline": 8.750826168833536,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9307692307692308,
+            "baseline": 0.7846153846153846,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301375,
+      "zipBytes": 103147
+    },
+    {
+      "id": "learn-fluid",
+      "sceneId": "w4",
+      "title": "多曲线流体属性模式识别",
+      "family": "classification",
+      "method": "多指标观测特征＋kNN",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.5710594315245477,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.6782608695652174,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 304158,
+      "zipBytes": 104093
+    },
+    {
+      "id": "scene-w3",
+      "sceneId": "w3",
+      "title": "成像测井裂缝识别",
+      "family": "raster",
+      "method": "像素观测特征＋逻辑回归",
+      "reference": 576,
+      "test": 1728,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301414,
+      "zipBytes": 103210
+    },
+    {
+      "id": "learn-nmr",
+      "sceneId": "w2",
+      "title": "核磁T2谱储层类型识别",
+      "family": "shape",
+      "method": "T₂谱分区积分＋kNN",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303051,
+      "zipBytes": 103773
+    },
+    {
+      "id": "learn-shale",
+      "sceneId": "w2",
+      "title": "泥质含量多曲线估计",
+      "family": "regression",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.6372709975813722,
+            "baseline": 14.06503823431228,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.88,
+            "baseline": 0.816,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303640,
+      "zipBytes": 103873
+    },
+    {
+      "id": "scene-w5",
+      "sceneId": "w5",
+      "title": "测井数据修复",
+      "family": "repair",
+      "method": "跨曲线岭回归插补",
+      "reference": 220,
+      "test": 45,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.1660129722836259,
+            "baseline": 3.1324727798131975,
+            "higher": false
+          }
+        ]
+      ],
+      "htmlBytes": 301541,
+      "zipBytes": 103234
+    },
+    {
+      "id": "scene-w1",
+      "sceneId": "w1",
+      "title": "测井曲线智能分层",
+      "family": "boundary",
+      "method": "多尺度窗口特征＋逻辑回归界面检测",
+      "reference": 205,
+      "test": 150,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.9852637783672267,
+            "baseline": 0.6376811594202898,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.9933333333333333,
+            "baseline": 0.8933333333333333,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 302210,
+      "zipBytes": 103445
+    },
+    {
+      "id": "learn-avo",
+      "sceneId": "s4",
+      "title": "AVO截距梯度组合分类",
+      "family": "shape",
+      "method": "AVO截距梯度拟合＋kNN",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 304150,
+      "zipBytes": 103853
+    },
+    {
+      "id": "scene-s4",
+      "sceneId": "s4",
+      "title": "储层参数反演",
+      "family": "regression",
+      "method": "二次特征岭回归＋独立区间校准",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.8909133116280106,
+            "baseline": 8.381270260170252,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9384615384615385,
+            "baseline": 0.8307692307692308,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301422,
+      "zipBytes": 103155
+    },
+    {
+      "id": "learn-horizon-track",
+      "sceneId": "s1",
+      "title": "地震层位连续智能追踪",
+      "family": "tracking",
+      "method": "逻辑回归像素评分＋动态规划连续追踪",
+      "reference": 1428,
+      "test": 1428,
+      "metrics": [
+        [
+          {
+            "name": "层位平均绝对偏差",
+            "ai": 0,
+            "baseline": 4.809523809523809,
+            "higher": false
+          }
+        ]
+      ],
+      "htmlBytes": 304022,
+      "zipBytes": 104084
+    },
+    {
+      "id": "scene-s1",
+      "sceneId": "s1",
+      "title": "地震断层自动解释",
+      "family": "raster",
+      "method": "像素观测特征＋逻辑回归",
+      "reference": 576,
+      "test": 1728,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.837736321522474,
+            "baseline": 0.494315642939994,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.9652777777777778,
+            "baseline": 0.6024305555555556,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301852,
+      "zipBytes": 103220
+    },
+    {
+      "id": "scene-s2",
+      "sceneId": "s2",
+      "title": "地震相智能分类",
+      "family": "shape",
+      "method": "形态特征＋标准化 kNN",
+      "reference": 150,
+      "test": 105,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.14814814814814814,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.2857142857142857,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301649,
+      "zipBytes": 103260
+    },
+    {
+      "id": "scene-s5",
+      "sceneId": "s5",
+      "title": "地震资料噪声压制",
+      "family": "denoise",
+      "method": "配对邻域回归去噪",
+      "reference": 880,
+      "test": 1760,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.03886562822579701,
+            "baseline": 0.04476640190276791,
+            "higher": false
+          }
+        ]
+      ],
+      "htmlBytes": 302599,
+      "zipBytes": 103477
+    },
+    {
+      "id": "learn-velocity",
+      "sceneId": "s3",
+      "title": "时距观测速度代理回归",
+      "family": "regression",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.3391166169117082,
+            "baseline": 0.8504171539942595,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.936,
+            "baseline": 0.888,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303720,
+      "zipBytes": 103751
+    },
+    {
+      "id": "scene-t5",
+      "sceneId": "t5",
+      "title": "储罐液位与泄漏智能监控",
+      "family": "tank",
+      "method": "图像液位与湿区特征＋逻辑回归",
+      "reference": 190,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 302277,
+      "zipBytes": 103196
+    },
+    {
+      "id": "learn-compressor",
+      "sceneId": "t3",
+      "title": "压缩机振动频谱工况识别",
+      "family": "shape",
+      "method": "离散傅里叶频带特征＋kNN",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 304615,
+      "zipBytes": 104269
+    },
+    {
+      "id": "learn-station-balance",
+      "sceneId": "t1",
+      "title": "多站流量守恒异常识别",
+      "family": "anomaly",
+      "method": "正常背景中位数/MAD稳健检测",
+      "reference": 210,
+      "test": 155,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.8523809523809525,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.896774193548387,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303621,
+      "zipBytes": 103740
+    },
+    {
+      "id": "scene-t4",
+      "sceneId": "t4",
+      "title": "油气计量智能校正",
+      "family": "regression",
+      "method": "二次特征岭回归＋独立区间校准",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 2.309939516123653,
+            "baseline": 5.192960653216224,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9076923076923077,
+            "baseline": 0.8615384615384616,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301904,
+      "zipBytes": 103017
+    },
+    {
+      "id": "learn-pig-condition",
+      "sceneId": "t2",
+      "title": "清管候选工况稳健筛查",
+      "family": "anomaly",
+      "method": "正常背景中位数/MAD稳健检测",
+      "reference": 210,
+      "test": 155,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 1,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303717,
+      "zipBytes": 103889
+    },
+    {
+      "id": "scene-t2",
+      "sceneId": "t2",
+      "title": "管道腐蚀智能评估",
+      "family": "regression",
+      "method": "二次特征岭回归＋独立区间校准",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.2056173626886149,
+            "baseline": 12.006911533001642,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9153846153846154,
+            "baseline": 0.9384615384615385,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301899,
+      "zipBytes": 103127
+    },
+    {
+      "id": "scene-t3",
+      "sceneId": "t3",
+      "title": "集输系统工况优化",
+      "family": "optimize",
+      "method": "二次岭回归代理＋约束网格搜索",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.619235010425403,
+            "baseline": 6.680030284192094,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9076923076923077,
+            "baseline": 0.9,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301119,
+      "zipBytes": 103152
+    },
+    {
+      "id": "learn-watercut",
+      "sceneId": "pr2",
+      "title": "含水率多工况软测量",
+      "family": "regression",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.381224770681657,
+            "baseline": 20.942045022557387,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.848,
+            "baseline": 0.904,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 304044,
+      "zipBytes": 103925
+    },
+    {
+      "id": "scene-pr1",
+      "sceneId": "pr1",
+      "title": "抽油机井工况诊断",
+      "family": "shape",
+      "method": "形态特征＋标准化 kNN",
+      "reference": 150,
+      "test": 105,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.24242424242424243,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.38095238095238093,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301758,
+      "zipBytes": 103352
+    },
+    {
+      "id": "learn-pump-energy",
+      "sceneId": "pr1",
+      "title": "抽油机运行能效代理",
+      "family": "regression",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.1881586624657274,
+            "baseline": 18.400262189212572,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.888,
+            "baseline": 0.912,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303384,
+      "zipBytes": 103745
+    },
+    {
+      "id": "scene-pr3",
+      "sceneId": "pr3",
+      "title": "智能注水调配",
+      "family": "optimize",
+      "method": "二次岭回归代理＋约束网格搜索",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.5909822363240385,
+            "baseline": 11.618313010757403,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9461538461538461,
+            "baseline": 0.8461538461538461,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301279,
+      "zipBytes": 103154
+    },
+    {
+      "id": "learn-gaslift",
+      "sceneId": "pr3",
+      "title": "气举注气量响应优选",
+      "family": "optimize",
+      "method": "双响应岭回归代理＋约束帕累托搜索",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 4.527008769297764,
+            "baseline": 11.279754458135072,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.832,
+            "baseline": 0.88,
+            "higher": true
+          }
+        ],
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 1.4830140372931708,
+            "baseline": 16.216401766497718,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.896,
+            "baseline": 0.904,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303369,
+      "zipBytes": 103956
+    },
+    {
+      "id": "scene-pr4",
+      "sceneId": "pr4",
+      "title": "电潜泵故障预警",
+      "family": "anomaly",
+      "method": "正常子空间 PCA＋重构残差",
+      "reference": 230,
+      "test": 170,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.4444444444444444,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.8,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301444,
+      "zipBytes": 103111
+    },
+    {
+      "id": "scene-pr5",
+      "sceneId": "pr5",
+      "title": "结蜡 / 结垢预测",
+      "family": "risk",
+      "method": "多指标逻辑回归风险识别",
+      "reference": 190,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.9468235961429381,
+            "baseline": 0.6888102725366876,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.952,
+            "baseline": 0.696,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301351,
+      "zipBytes": 103186
+    },
+    {
+      "id": "scene-d2",
+      "sceneId": "d2",
+      "title": "井下复杂事故前兆预警",
+      "family": "anomaly",
+      "method": "正常子空间 PCA＋重构残差",
+      "reference": 230,
+      "test": 170,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.4444444444444444,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.8,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301577,
+      "zipBytes": 103261
+    },
+    {
+      "id": "learn-hole-cleaning",
+      "sceneId": "d2",
+      "title": "井眼清洁多指标风险分级",
+      "family": "classification",
+      "method": "多指标观测特征＋kNN",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 0.7940668824163969,
+            "baseline": 0.5535460992907801,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 0.8347826086956521,
+            "baseline": 0.591304347826087,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303238,
+      "zipBytes": 103679
+    },
+    {
+      "id": "scene-d3",
+      "sceneId": "d3",
+      "title": "井眼轨迹智能控制",
+      "family": "control",
+      "method": "岭回归系统辨识＋受限滚动控制",
+      "reference": 220,
+      "test": 60,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 0.13729365039175107,
+            "baseline": 0.5789566210890325,
+            "higher": false
+          }
+        ]
+      ],
+      "htmlBytes": 301443,
+      "zipBytes": 103144
+    },
+    {
+      "id": "learn-mse",
+      "sceneId": "d1",
+      "title": "机械比能多参数代理估计",
+      "family": "regression",
+      "method": "二次岭回归＋独立区间校准",
+      "reference": 220,
+      "test": 125,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 8.135604676125544,
+            "baseline": 24.819404686292543,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.928,
+            "baseline": 0.92,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 303170,
+      "zipBytes": 103729
+    },
+    {
+      "id": "scene-d5",
+      "sceneId": "d5",
+      "title": "钻井液性能智能调控",
+      "family": "optimize",
+      "method": "二次岭回归代理＋约束网格搜索",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 6.081238558268687,
+            "baseline": 12.800143056958866,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9076923076923077,
+            "baseline": 0.9230769230769231,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301227,
+      "zipBytes": 103106
+    },
+    {
+      "id": "scene-d4",
+      "sceneId": "d4",
+      "title": "钻具失效预测",
+      "family": "regression",
+      "method": "二次特征岭回归＋独立区间校准",
+      "reference": 200,
+      "test": 130,
+      "metrics": [
+        [
+          {
+            "name": "独立测试 RMSE",
+            "ai": 3.395031167081006,
+            "baseline": 22.110631365495166,
+            "higher": false
+          },
+          {
+            "name": "90% 校准区间实际覆盖率",
+            "ai": 0.9,
+            "baseline": 0.8769230769230769,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 301044,
+      "zipBytes": 103114
+    },
+    {
+      "id": "learn-torsion",
+      "sceneId": "d4",
+      "title": "钻柱扭振频带工况识别",
+      "family": "shape",
+      "method": "离散傅里叶频带特征＋kNN",
+      "reference": 180,
+      "test": 115,
+      "metrics": [
+        [
+          {
+            "name": "独立测试宏 F1",
+            "ai": 1,
+            "baseline": 0.15555555555555556,
+            "higher": true
+          },
+          {
+            "name": "独立测试准确率",
+            "ai": 1,
+            "baseline": 0.30434782608695654,
+            "higher": true
+          }
+        ]
+      ],
+      "htmlBytes": 304305,
+      "zipBytes": 104125
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "workover-ai",
+      "sceneId": "wo1",
+      "htmlBytes": 258526,
+      "zipBytes": 88797,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-wo4",
+      "sceneId": "wo4",
+      "htmlBytes": 301350,
+      "zipBytes": 103136,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-wo5",
+      "sceneId": "wo5",
+      "htmlBytes": 300871,
+      "zipBytes": 102849,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-wo3",
+      "sceneId": "wo3",
+      "htmlBytes": 301248,
+      "zipBytes": 103099,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-tubing-pit",
+      "sceneId": "wo3",
+      "htmlBytes": 303443,
+      "zipBytes": 103750,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-leak-depth",
+      "sceneId": "wo3",
+      "htmlBytes": 303829,
+      "zipBytes": 103833,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-sand-release",
+      "sceneId": "wo2",
+      "htmlBytes": 303480,
+      "zipBytes": 103713,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-wo2",
+      "sceneId": "wo2",
+      "htmlBytes": 301753,
+      "zipBytes": 103231,
+      "roundtrip": true
+    },
+    {
+      "id": "refining-ai",
+      "sceneId": "r5",
+      "htmlBytes": 258874,
+      "zipBytes": 88752,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-r2",
+      "sceneId": "r2",
+      "htmlBytes": 302339,
+      "zipBytes": 103360,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-r4",
+      "sceneId": "r4",
+      "htmlBytes": 301535,
+      "zipBytes": 103153,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-distillation",
+      "sceneId": "r1",
+      "htmlBytes": 303410,
+      "zipBytes": 103918,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-r1",
+      "sceneId": "r1",
+      "htmlBytes": 301346,
+      "zipBytes": 103202,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-blending",
+      "sceneId": "r1",
+      "htmlBytes": 303949,
+      "zipBytes": 104059,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-fouling",
+      "sceneId": "r3",
+      "htmlBytes": 303850,
+      "zipBytes": 103813,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-r3",
+      "sceneId": "r3",
+      "htmlBytes": 301651,
+      "zipBytes": 103220,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-vdl",
+      "sceneId": "c1",
+      "htmlBytes": 303423,
+      "zipBytes": 103744,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-c3",
+      "sceneId": "c3",
+      "htmlBytes": 301544,
+      "zipBytes": 103184,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-c4",
+      "sceneId": "c4",
+      "htmlBytes": 301572,
+      "zipBytes": 103153,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-cement-contamination",
+      "sceneId": "c3",
+      "htmlBytes": 302919,
+      "zipBytes": 103590,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-cement-time",
+      "sceneId": "c2",
+      "htmlBytes": 303259,
+      "zipBytes": 103641,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-c2",
+      "sceneId": "c2",
+      "htmlBytes": 301461,
+      "zipBytes": 103097,
+      "roundtrip": true
+    },
+    {
+      "id": "cementing-ai",
+      "sceneId": "c1",
+      "htmlBytes": 258476,
+      "zipBytes": 88824,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-geochem-background",
+      "sceneId": "g2",
+      "htmlBytes": 303588,
+      "zipBytes": 103588,
+      "roundtrip": true
+    },
+    {
+      "id": "geology-geochem",
+      "sceneId": "g2",
+      "htmlBytes": 263623,
+      "zipBytes": 90335,
+      "roundtrip": true
+    },
+    {
+      "id": "geology-map-elements",
+      "sceneId": "g3",
+      "htmlBytes": 265856,
+      "zipBytes": 90272,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-symbols",
+      "sceneId": "g3",
+      "htmlBytes": 303472,
+      "zipBytes": 103849,
+      "roundtrip": true
+    },
+    {
+      "id": "geology-lineament",
+      "sceneId": "g1",
+      "htmlBytes": 262681,
+      "zipBytes": 90101,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-mineral",
+      "sceneId": "g1",
+      "htmlBytes": 303525,
+      "zipBytes": 103604,
+      "roundtrip": true
+    },
+    {
+      "id": "geology-lithology",
+      "sceneId": "g1",
+      "htmlBytes": 262725,
+      "zipBytes": 90270,
+      "roundtrip": true
+    },
+    {
+      "id": "geology-fractures",
+      "sceneId": "g4",
+      "htmlBytes": 262549,
+      "zipBytes": 90013,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-co2",
+      "sceneId": "e3",
+      "htmlBytes": 303948,
+      "zipBytes": 103982,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-e3",
+      "sceneId": "e3",
+      "htmlBytes": 301055,
+      "zipBytes": 103104,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-falloff",
+      "sceneId": "e2",
+      "htmlBytes": 303428,
+      "zipBytes": 103837,
+      "roundtrip": true
+    },
+    {
+      "id": "eor-ai",
+      "sceneId": "e1",
+      "htmlBytes": 258594,
+      "zipBytes": 88906,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-e2",
+      "sceneId": "e2",
+      "htmlBytes": 301103,
+      "zipBytes": 103008,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-e5",
+      "sceneId": "e5",
+      "htmlBytes": 302263,
+      "zipBytes": 103421,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-polymer",
+      "sceneId": "e3",
+      "htmlBytes": 303588,
+      "zipBytes": 103719,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-e4",
+      "sceneId": "e4",
+      "htmlBytes": 300894,
+      "zipBytes": 102911,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-inflow",
+      "sceneId": "co4",
+      "htmlBytes": 303015,
+      "zipBytes": 103568,
+      "roundtrip": true
+    },
+    {
+      "id": "completion-ai",
+      "sceneId": "co1",
+      "htmlBytes": 258770,
+      "zipBytes": 88806,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-co3",
+      "sceneId": "co3",
+      "htmlBytes": 301571,
+      "zipBytes": 103133,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-seal",
+      "sceneId": "co3",
+      "htmlBytes": 303345,
+      "zipBytes": 103803,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-co2",
+      "sceneId": "co2",
+      "htmlBytes": 301853,
+      "zipBytes": 103196,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-co4",
+      "sceneId": "co4",
+      "htmlBytes": 301621,
+      "zipBytes": 103294,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-screen",
+      "sceneId": "co1",
+      "htmlBytes": 303082,
+      "zipBytes": 103653,
+      "roundtrip": true
+    },
+    {
+      "id": "perforation-ai",
+      "sceneId": "p1",
+      "htmlBytes": 258442,
+      "zipBytes": 88734,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-shot-acoustic",
+      "sceneId": "p4",
+      "htmlBytes": 304660,
+      "zipBytes": 104156,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-p2",
+      "sceneId": "p2",
+      "htmlBytes": 301527,
+      "zipBytes": 103075,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-charge-tradeoff",
+      "sceneId": "p3",
+      "htmlBytes": 303721,
+      "zipBytes": 103988,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-p3",
+      "sceneId": "p3",
+      "htmlBytes": 301590,
+      "zipBytes": 103196,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-p4",
+      "sceneId": "p4",
+      "htmlBytes": 301688,
+      "zipBytes": 103020,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-underbalance",
+      "sceneId": "p4",
+      "htmlBytes": 303490,
+      "zipBytes": 103715,
+      "roundtrip": true
+    },
+    {
+      "id": "mudlogging-ai",
+      "sceneId": "m1",
+      "htmlBytes": 258468,
+      "zipBytes": 88696,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-lag-depth",
+      "sceneId": "m4",
+      "htmlBytes": 303612,
+      "zipBytes": 103767,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-cuttings-mixture",
+      "sceneId": "m1",
+      "htmlBytes": 303656,
+      "zipBytes": 103862,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-m5",
+      "sceneId": "m5",
+      "htmlBytes": 302034,
+      "zipBytes": 103334,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-m2",
+      "sceneId": "m2",
+      "htmlBytes": 301295,
+      "zipBytes": 103142,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-gas-baseline",
+      "sceneId": "m2",
+      "htmlBytes": 303179,
+      "zipBytes": 103666,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-m3",
+      "sceneId": "m3",
+      "htmlBytes": 301289,
+      "zipBytes": 103105,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-m4",
+      "sceneId": "m4",
+      "htmlBytes": 301624,
+      "zipBytes": 103284,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-w2",
+      "sceneId": "w2",
+      "htmlBytes": 301375,
+      "zipBytes": 103147,
+      "roundtrip": true
+    },
+    {
+      "id": "welllog-ai",
+      "sceneId": "w4",
+      "htmlBytes": 258485,
+      "zipBytes": 88792,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-fluid",
+      "sceneId": "w4",
+      "htmlBytes": 304158,
+      "zipBytes": 104093,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-w3",
+      "sceneId": "w3",
+      "htmlBytes": 301414,
+      "zipBytes": 103210,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-nmr",
+      "sceneId": "w2",
+      "htmlBytes": 303051,
+      "zipBytes": 103773,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-shale",
+      "sceneId": "w2",
+      "htmlBytes": 303640,
+      "zipBytes": 103873,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-w5",
+      "sceneId": "w5",
+      "htmlBytes": 301541,
+      "zipBytes": 103234,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-w1",
+      "sceneId": "w1",
+      "htmlBytes": 302210,
+      "zipBytes": 103445,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-avo",
+      "sceneId": "s4",
+      "htmlBytes": 304150,
+      "zipBytes": 103853,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-s4",
+      "sceneId": "s4",
+      "htmlBytes": 301422,
+      "zipBytes": 103155,
+      "roundtrip": true
+    },
+    {
+      "id": "firstbreak-ai",
+      "sceneId": "s3",
+      "htmlBytes": 258521,
+      "zipBytes": 88809,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-horizon-track",
+      "sceneId": "s1",
+      "htmlBytes": 304022,
+      "zipBytes": 104084,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-s1",
+      "sceneId": "s1",
+      "htmlBytes": 301852,
+      "zipBytes": 103220,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-s2",
+      "sceneId": "s2",
+      "htmlBytes": 301649,
+      "zipBytes": 103260,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-s5",
+      "sceneId": "s5",
+      "htmlBytes": 302599,
+      "zipBytes": 103477,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-velocity",
+      "sceneId": "s3",
+      "htmlBytes": 303720,
+      "zipBytes": 103751,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-t5",
+      "sceneId": "t5",
+      "htmlBytes": 302277,
+      "zipBytes": 103196,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-compressor",
+      "sceneId": "t3",
+      "htmlBytes": 304615,
+      "zipBytes": 104269,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-station-balance",
+      "sceneId": "t1",
+      "htmlBytes": 303621,
+      "zipBytes": 103740,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-t4",
+      "sceneId": "t4",
+      "htmlBytes": 301904,
+      "zipBytes": 103017,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-pig-condition",
+      "sceneId": "t2",
+      "htmlBytes": 303717,
+      "zipBytes": 103889,
+      "roundtrip": true
+    },
+    {
+      "id": "transport-ai",
+      "sceneId": "t1",
+      "htmlBytes": 259310,
+      "zipBytes": 88913,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-t2",
+      "sceneId": "t2",
+      "htmlBytes": 301899,
+      "zipBytes": 103127,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-t3",
+      "sceneId": "t3",
+      "htmlBytes": 301119,
+      "zipBytes": 103152,
+      "roundtrip": true
+    },
+    {
+      "id": "production-ai",
+      "sceneId": "pr2",
+      "htmlBytes": 260193,
+      "zipBytes": 88937,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-watercut",
+      "sceneId": "pr2",
+      "htmlBytes": 304044,
+      "zipBytes": 103925,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-pr1",
+      "sceneId": "pr1",
+      "htmlBytes": 301758,
+      "zipBytes": 103352,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-pump-energy",
+      "sceneId": "pr1",
+      "htmlBytes": 303384,
+      "zipBytes": 103745,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-pr3",
+      "sceneId": "pr3",
+      "htmlBytes": 301279,
+      "zipBytes": 103154,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-gaslift",
+      "sceneId": "pr3",
+      "htmlBytes": 303369,
+      "zipBytes": 103956,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-pr4",
+      "sceneId": "pr4",
+      "htmlBytes": 301444,
+      "zipBytes": 103111,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-pr5",
+      "sceneId": "pr5",
+      "htmlBytes": 301351,
+      "zipBytes": 103186,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-d2",
+      "sceneId": "d2",
+      "htmlBytes": 301577,
+      "zipBytes": 103261,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-hole-cleaning",
+      "sceneId": "d2",
+      "htmlBytes": 303238,
+      "zipBytes": 103679,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-d3",
+      "sceneId": "d3",
+      "htmlBytes": 301443,
+      "zipBytes": 103144,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-mse",
+      "sceneId": "d1",
+      "htmlBytes": 303170,
+      "zipBytes": 103729,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-d5",
+      "sceneId": "d5",
+      "htmlBytes": 301227,
+      "zipBytes": 103106,
+      "roundtrip": true
+    },
+    {
+      "id": "scene-d4",
+      "sceneId": "d4",
+      "htmlBytes": 301044,
+      "zipBytes": 103114,
+      "roundtrip": true
+    },
+    {
+      "id": "learn-torsion",
+      "sceneId": "d4",
+      "htmlBytes": 304305,
+      "zipBytes": 104125,
+      "roundtrip": true
+    },
+    {
+      "id": "drilling-ai",
+      "sceneId": "d1",
+      "htmlBytes": 258527,
+      "zipBytes": 88965,
+      "roundtrip": true
+    }
+  ]
+}

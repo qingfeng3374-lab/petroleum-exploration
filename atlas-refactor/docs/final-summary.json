@@ -1,0 +1,322 @@
+{
+  "iteration": "1.3.0",
+  "scope": "themes-bilingual-readability-manual-case-entry",
+  "checks": {
+    "unitTests": 20,
+    "svelteErrors": 0,
+    "svelteWarnings": 0,
+    "build": true
+  },
+  "reports": {
+    "browser-results.json": {
+      "report": [
+        {
+          "id": "geology-geochem",
+          "status": "计算完成 · 4 ms · 148 个训练样本 / 1920 个独立测试像元",
+          "changed": true
+        },
+        {
+          "id": "geology-map-elements",
+          "status": "计算完成 · 6 ms · 148 个训练样本 / 1920 个独立测试像元",
+          "changed": true
+        },
+        {
+          "id": "geology-lineament",
+          "status": "计算完成 · 13 ms · 148 个训练样本 / 1920 个独立测试像元",
+          "changed": true
+        },
+        {
+          "id": "geology-lithology",
+          "status": "计算完成 · 58 ms · 148 个训练样本 / 1920 个独立测试像元",
+          "changed": true
+        },
+        {
+          "id": "geology-fractures",
+          "status": "计算完成 · 15 ms · 148 个训练样本 / 1920 个独立测试像元",
+          "changed": true
+        }
+      ],
+      "overflow": false,
+      "errors": [],
+      "legacyImport": true
+    },
+    "compatibility-results.json": {
+      "result": [
+        {
+          "id": "geology-geochem",
+          "standalone": true,
+          "newImport": true,
+          "oldImport": true
+        },
+        {
+          "id": "geology-map-elements",
+          "standalone": true,
+          "newImport": true,
+          "oldImport": true
+        },
+        {
+          "id": "geology-lineament",
+          "standalone": true,
+          "newImport": true,
+          "oldImport": true
+        },
+        {
+          "id": "geology-lithology",
+          "standalone": true,
+          "newImport": true,
+          "oldImport": true
+        },
+        {
+          "id": "geology-fractures",
+          "standalone": true,
+          "newImport": true,
+          "oldImport": true
+        }
+      ],
+      "errors": [],
+      "visibleCases": 6
+    },
+    "legacy-modes-results.json": {
+      "results": [
+        {
+          "kind": "module",
+          "imported": true
+        },
+        {
+          "kind": "builtin",
+          "imported": true
+        },
+        {
+          "kind": "background",
+          "imported": true
+        },
+        {
+          "kind": "three-model",
+          "rendered": true
+        }
+      ],
+      "errors": []
+    },
+    "production-results.json": {
+      "checks": [
+        {
+          "id": "geology-geochem",
+          "status": "计算完成 · 7 ms · 148 个训练样本 / 1920 个独立测试像元",
+          "threeViews": true
+        },
+        {
+          "id": "geology-map-elements",
+          "status": "计算完成 · 6 ms · 148 个训练样本 / 1920 个独立测试像元",
+          "threeViews": true
+        },
+        {
+          "id": "geology-lineament",
+          "status": "计算完成 · 10 ms · 148 个训练样本 / 1920 个独立测试像元",
+          "threeViews": true
+        },
+        {
+          "id": "geology-lithology",
+          "status": "计算完成 · 33 ms · 148 个训练样本 / 1920 个独立测试像元",
+          "threeViews": true
+        },
+        {
+          "id": "geology-fractures",
+          "status": "计算完成 · 11 ms · 148 个训练样本 / 1920 个独立测试像元",
+          "threeViews": true
+        },
+        {
+          "id": "welllog-layer",
+          "retained": true
+        }
+      ],
+      "mobileOverflow": false,
+      "frameOverflow": false,
+      "errors": [],
+      "browser": "155.0.8059.85",
+      "externalNetworkBlocked": true
+    },
+    "learning-upgrade-results.json": {
+      "results": [
+        {
+          "case": "lithology",
+          "terms": true,
+          "workflow": true,
+          "keyboardAndScatter": true
+        },
+        {
+          "case": "geochem",
+          "iteration": true,
+          "threshold": true,
+          "rankedSelection": true
+        },
+        {
+          "case": "map",
+          "areaControl": true
+        }
+      ],
+      "errors": [],
+      "overflow": false
+    },
+    "visual-redesign-results.json": {
+      "base": "http://127.0.0.1:5174/",
+      "results": [
+        {
+          "test": "terrain",
+          "webgl": true,
+          "explode": true,
+          "keyboard": true,
+          "layerSelection": true
+        },
+        {
+          "test": "home-navigation",
+          "stageSelection": true,
+          "methodSelection": true,
+          "caseSelection": true
+        },
+        {
+          "test": "case-tools",
+          "workflowPlayback": true,
+          "compareSplit": true,
+          "compareDrag": true,
+          "embeddedMotion": true
+        },
+        {
+          "test": "dialog",
+          "focusTrap": true,
+          "escape": true,
+          "returnFocus": true
+        },
+        {
+          "test": "responsive",
+          "width": 390,
+          "homeOverflow": false,
+          "caseOverflow": false
+        },
+        {
+          "test": "responsive",
+          "width": 768,
+          "homeOverflow": false,
+          "caseOverflow": false
+        },
+        {
+          "test": "reduced-motion",
+          "respected": true
+        }
+      ],
+      "errors": []
+    },
+    "preferences-results.json": {
+      "base": "http://127.0.0.1:4173",
+      "results": [
+        {
+          "test": "preference-persistence",
+          "passed": true
+        },
+        {
+          "test": "case-preferences",
+          "id": "geology-geochem",
+          "parametersPreserved": true,
+          "exportsIdentical": true
+        },
+        {
+          "test": "case-preferences",
+          "id": "geology-map-elements",
+          "parametersPreserved": true,
+          "exportsIdentical": true
+        },
+        {
+          "test": "case-preferences",
+          "id": "geology-lineament",
+          "parametersPreserved": true,
+          "exportsIdentical": true
+        },
+        {
+          "test": "case-preferences",
+          "id": "geology-lithology",
+          "parametersPreserved": true,
+          "exportsIdentical": true
+        },
+        {
+          "test": "case-preferences",
+          "id": "geology-fractures",
+          "parametersPreserved": true,
+          "exportsIdentical": true
+        },
+        {
+          "test": "legacy-welllog-preferences",
+          "passed": true
+        },
+        {
+          "test": "manual-case",
+          "validation": true,
+          "sanitized": true,
+          "workflow": true,
+          "demo": true,
+          "persistence": true,
+          "zipExport": true,
+          "reimport": true,
+          "metadataEdit": true
+        },
+        {
+          "test": "standalone-preferences",
+          "passed": true
+        }
+      ],
+      "missing": [],
+      "errors": []
+    },
+    "legacy-appearance-results.json": {
+      "results": [
+        {
+          "theme": "light",
+          "utf8": true,
+          "englishHeading": true,
+          "chartBackground": "rgb(238, 242, 220)"
+        },
+        {
+          "theme": "dark",
+          "utf8": true,
+          "englishHeading": true,
+          "chartBackground": "rgb(26, 44, 33)"
+        },
+        {
+          "width": 390,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "overflow": false
+        }
+      ],
+      "errors": []
+    }
+  },
+  "currentVerification": [
+    "browser-results.json",
+    "compatibility-results.json",
+    "production-results.json",
+    "visual-redesign-results.json",
+    "preferences-results.json",
+    "legacy-appearance-results.json"
+  ],
+  "features": {
+    "themes": [
+      "dark",
+      "light"
+    ],
+    "languages": [
+      "zh",
+      "en"
+    ],
+    "translatedStages": 13,
+    "translatedScenarios": 61,
+    "translatedExperiments": 6,
+    "manualEntry": true,
+    "fileImportRetained": true,
+    "statePreservedOnPreferenceChanges": true
+  }
+}

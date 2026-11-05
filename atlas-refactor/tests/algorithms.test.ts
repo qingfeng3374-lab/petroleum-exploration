@@ -1,0 +1,8 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {generate,knn,kmeans,metrics,logistic,standardize,skeleton,random} from '../src/case-sdk/algorithms';
+test('seed determinism and scene diversity',()=>{assert.deepEqual(generate('knn',1,.2),generate('knn',1,.2));assert.notDeepEqual(generate('knn',1,.2).truth,generate('knn',2,.2).truth)});
+test('nearest neighbors classify held out feature vectors',()=>{const t=[{x:0,y:0,f:[0]},{x:1,y:0,f:[10]}];assert.deepEqual(knn(t,[0,1],[{x:2,y:0,f:[9]}],1),[1])});
+test('standardization fitted only to training data; constant safe',()=>{const p=(n:number)=>({x:0,y:0,f:[n,1]});const s=standardize([p(0),p(2)],[p(100)]);assert.equal(s.test[0].f[0],99);assert.equal(s.test[0].f[1],0)});
+test('logistic loss learns separation without test labels',()=>{const a=Array.from({length:20},(_,i)=>({x:0,y:0,f:[i-10]}));const m=logistic(a,a.map(p=>+(p.f[0]>0)),a);assert.ok(m.loss.at(-1)!<m.loss[0]);assert.ok(m.prob.at(-1)!>m.prob[0])});
+test('kmeans objective and nonnegative scores',()=>{const a=Array.from({length:20},(_,i)=>({x:0,y:0,f:[i%2?10:0]}));const m=kmeans(a,a,2);assert.ok(m.loss.at(-1)!<=m.loss[0]);assert.ok(m.scores.every(v=>v>=0))});
+test('metrics include empty predictions and perfect classification',()=>{assert.equal(metrics([0,1],[0,1],2).macro,1);assert.equal(metrics([],[],2).macro,0);assert.equal(metrics([0,0],[1,1],2).macro,0)});
+test('skeleton thins solid region',()=>{const a=Array(49).fill(0);for(let y=1;y<6;y++)for(let x=1;x<6;x++)a[y*7+x]=1;const b=skeleton(a,7);assert.ok(b.reduce((s,v)=>s+v,0)<25);assert.ok(b.some(Boolean))});

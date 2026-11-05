@@ -1,0 +1,22 @@
+{
+  "base": "http://127.0.0.1:4173/",
+  "results": [
+    {
+      "test": "nested-zip-manifest-css-javascript-persistence",
+      "passed": true
+    },
+    {
+      "test": "import-export-binary-roundtrip",
+      "passed": true
+    },
+    {
+      "test": "builtin-zip-download-direct-reimport-and-ai-demo",
+      "passed": true
+    },
+    {
+      "test": "manual-entry-retained",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

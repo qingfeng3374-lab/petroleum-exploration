@@ -1,0 +1,518 @@
+{
+  "checks": [
+    {
+      "id": "workover-ai",
+      "status": "实际计算完成 · 3 ms · 60 参考记录 / 30 独立检验记录",
+      "threeViews": true
+    },
+    {
+      "id": "scene-wo4",
+      "status": "实际计算完成 · 14 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-wo5",
+      "status": "实际计算完成 · 6 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-wo3",
+      "status": "实际计算完成 · 19 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-tubing-pit",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-leak-depth",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-sand-release",
+      "status": "实际计算完成 · 7 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-wo2",
+      "status": "实际计算完成 · 6 ms",
+      "threeViews": true
+    },
+    {
+      "id": "refining-ai",
+      "status": "实际计算完成 · 2 ms · 180 参考记录 / 120 独立检验记录",
+      "threeViews": true
+    },
+    {
+      "id": "scene-r2",
+      "status": "实际计算完成 · 19 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-r4",
+      "status": "实际计算完成 · 2 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-distillation",
+      "status": "实际计算完成 · 8 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-r1",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-blending",
+      "status": "实际计算完成 · 8 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-fouling",
+      "status": "实际计算完成 · 6 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-r3",
+      "status": "实际计算完成 · 7 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-vdl",
+      "status": "实际计算完成 · 16 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-c3",
+      "status": "实际计算完成 · 15 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-c4",
+      "status": "实际计算完成 · 6 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-cement-contamination",
+      "status": "实际计算完成 · 6 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-cement-time",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-c2",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "cementing-ai",
+      "status": "实际计算完成 · 11 ms · 180 参考记录 / 120 独立检验记录",
+      "threeViews": true
+    },
+    {
+      "id": "learn-geochem-background",
+      "status": "实际计算完成 · 2 ms",
+      "threeViews": true
+    },
+    {
+      "id": "geology-geochem",
+      "status": "计算完成 · 4 ms · 148 个训练样本 / 1920 个独立测试像元",
+      "threeViews": true
+    },
+    {
+      "id": "geology-map-elements",
+      "status": "计算完成 · 5 ms · 148 个训练样本 / 1920 个独立测试像元",
+      "threeViews": true
+    },
+    {
+      "id": "learn-symbols",
+      "status": "实际计算完成 · 51 ms",
+      "threeViews": true
+    },
+    {
+      "id": "geology-lineament",
+      "status": "计算完成 · 8 ms · 148 个训练样本 / 1920 个独立测试像元",
+      "threeViews": true
+    },
+    {
+      "id": "learn-mineral",
+      "status": "实际计算完成 · 16 ms",
+      "threeViews": true
+    },
+    {
+      "id": "geology-lithology",
+      "status": "计算完成 · 38 ms · 148 个训练样本 / 1920 个独立测试像元",
+      "threeViews": true
+    },
+    {
+      "id": "geology-fractures",
+      "status": "计算完成 · 9 ms · 148 个训练样本 / 1920 个独立测试像元",
+      "threeViews": true
+    },
+    {
+      "id": "learn-co2",
+      "status": "实际计算完成 · 10 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-e3",
+      "status": "实际计算完成 · 7 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-falloff",
+      "status": "实际计算完成 · 13 ms",
+      "threeViews": true
+    },
+    {
+      "id": "eor-ai",
+      "status": "实际计算完成 · 3 ms · 180 参考记录 / 120 独立检验记录",
+      "threeViews": true
+    },
+    {
+      "id": "scene-e2",
+      "status": "实际计算完成 · 8 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-e5",
+      "status": "实际计算完成 · 4 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-polymer",
+      "status": "实际计算完成 · 6 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-e4",
+      "status": "实际计算完成 · 6 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-inflow",
+      "status": "实际计算完成 · 11 ms",
+      "threeViews": true
+    },
+    {
+      "id": "completion-ai",
+      "status": "实际计算完成 · 5 ms · 180 参考记录 / 120 独立检验记录",
+      "threeViews": true
+    },
+    {
+      "id": "scene-co3",
+      "status": "实际计算完成 · 4 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-seal",
+      "status": "实际计算完成 · 23 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-co2",
+      "status": "实际计算完成 · 10 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-co4",
+      "status": "实际计算完成 · 3 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-screen",
+      "status": "实际计算完成 · 8 ms",
+      "threeViews": true
+    },
+    {
+      "id": "perforation-ai",
+      "status": "实际计算完成 · 4 ms · 180 参考记录 / 120 独立检验记录",
+      "threeViews": true
+    },
+    {
+      "id": "learn-shot-acoustic",
+      "status": "实际计算完成 · 20 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-p2",
+      "status": "实际计算完成 · 6 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-charge-tradeoff",
+      "status": "实际计算完成 · 8 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-p3",
+      "status": "实际计算完成 · 6 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-p4",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-underbalance",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "mudlogging-ai",
+      "status": "实际计算完成 · 5 ms · 180 参考记录 / 120 独立检验记录",
+      "threeViews": true
+    },
+    {
+      "id": "learn-lag-depth",
+      "status": "实际计算完成 · 6 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-cuttings-mixture",
+      "status": "实际计算完成 · 11 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-m5",
+      "status": "实际计算完成 · 30 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-m2",
+      "status": "实际计算完成 · 8 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-gas-baseline",
+      "status": "实际计算完成 · 4 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-m3",
+      "status": "实际计算完成 · 11 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-m4",
+      "status": "实际计算完成 · 9 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-w2",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "welllog-ai",
+      "status": "实际计算完成 · 5 ms · 180 参考记录 / 120 独立检验记录",
+      "threeViews": true
+    },
+    {
+      "id": "learn-fluid",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-w3",
+      "status": "实际计算完成 · 22 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-nmr",
+      "status": "实际计算完成 · 19 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-shale",
+      "status": "实际计算完成 · 3 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-w5",
+      "status": "实际计算完成 · 1 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-w1",
+      "status": "实际计算完成 · 9 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-avo",
+      "status": "实际计算完成 · 19 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-s4",
+      "status": "实际计算完成 · 3 ms",
+      "threeViews": true
+    },
+    {
+      "id": "firstbreak-ai",
+      "status": "实际计算完成 · 30 ms · 1288 参考记录 / 552 独立检验记录",
+      "threeViews": true
+    },
+    {
+      "id": "learn-horizon-track",
+      "status": "实际计算完成 · 26 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-s1",
+      "status": "实际计算完成 · 16 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-s2",
+      "status": "实际计算完成 · 7 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-s5",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-velocity",
+      "status": "实际计算完成 · 4 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-t5",
+      "status": "实际计算完成 · 32 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-compressor",
+      "status": "实际计算完成 · 16 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-station-balance",
+      "status": "实际计算完成 · 2 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-t4",
+      "status": "实际计算完成 · 3 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-pig-condition",
+      "status": "实际计算完成 · 2 ms",
+      "threeViews": true
+    },
+    {
+      "id": "transport-ai",
+      "status": "实际计算完成 · 2 ms · 210 参考记录 / 160 独立检验记录",
+      "threeViews": true
+    },
+    {
+      "id": "scene-t2",
+      "status": "实际计算完成 · 4 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-t3",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "production-ai",
+      "status": "实际计算完成 · 2 ms · 100 参考记录 / 66 独立检验记录",
+      "threeViews": true
+    },
+    {
+      "id": "learn-watercut",
+      "status": "实际计算完成 · 4 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-pr1",
+      "status": "实际计算完成 · 8 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-pump-energy",
+      "status": "实际计算完成 · 4 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-pr3",
+      "status": "实际计算完成 · 7 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-gaslift",
+      "status": "实际计算完成 · 11 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-pr4",
+      "status": "实际计算完成 · 2 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-pr5",
+      "status": "实际计算完成 · 17 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-d2",
+      "status": "实际计算完成 · 3 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-hole-cleaning",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-d3",
+      "status": "实际计算完成 · 2 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-mse",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-d5",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "scene-d4",
+      "status": "实际计算完成 · 5 ms",
+      "threeViews": true
+    },
+    {
+      "id": "learn-torsion",
+      "status": "实际计算完成 · 21 ms",
+      "threeViews": true
+    },
+    {
+      "id": "drilling-ai",
+      "status": "实际计算完成 · 2 ms · 180 参考记录 / 120 独立检验记录",
+      "threeViews": true
+    },
+    {
+      "id": "welllog-layer",
+      "retained": true
+    }
+  ],
+  "mobileOverflow": false,
+  "frameOverflow": false,
+  "errors": [],
+  "browser": "156.0.8078.74",
+  "externalNetworkBlocked": true
+}

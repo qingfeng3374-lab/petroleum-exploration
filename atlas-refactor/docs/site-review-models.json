@@ -1,0 +1,512 @@
+{
+  "cases": 101,
+  "scenarios": 483,
+  "results": [
+    {
+      "id": "workover-ai",
+      "scenarios": 4,
+      "passed": true
+    },
+    {
+      "id": "scene-wo4",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-wo5",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-wo3",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-tubing-pit",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-leak-depth",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-sand-release",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-wo2",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "refining-ai",
+      "scenarios": 4,
+      "passed": true
+    },
+    {
+      "id": "scene-r2",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-r4",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-distillation",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-r1",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-blending",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-fouling",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-r3",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-vdl",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-c3",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-c4",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-cement-contamination",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-cement-time",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-c2",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "cementing-ai",
+      "scenarios": 4,
+      "passed": true
+    },
+    {
+      "id": "learn-geochem-background",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "geology-geochem",
+      "scenarios": 3,
+      "passed": true
+    },
+    {
+      "id": "geology-map-elements",
+      "scenarios": 3,
+      "passed": true
+    },
+    {
+      "id": "learn-symbols",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "geology-lineament",
+      "scenarios": 3,
+      "passed": true
+    },
+    {
+      "id": "learn-mineral",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "geology-lithology",
+      "scenarios": 3,
+      "passed": true
+    },
+    {
+      "id": "geology-fractures",
+      "scenarios": 3,
+      "passed": true
+    },
+    {
+      "id": "learn-co2",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-e3",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-falloff",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "eor-ai",
+      "scenarios": 4,
+      "passed": true
+    },
+    {
+      "id": "scene-e2",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-e5",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-polymer",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-e4",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-inflow",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "completion-ai",
+      "scenarios": 4,
+      "passed": true
+    },
+    {
+      "id": "scene-co3",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-seal",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-co2",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-co4",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-screen",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "perforation-ai",
+      "scenarios": 4,
+      "passed": true
+    },
+    {
+      "id": "learn-shot-acoustic",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-p2",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-charge-tradeoff",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-p3",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-p4",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-underbalance",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "mudlogging-ai",
+      "scenarios": 4,
+      "passed": true
+    },
+    {
+      "id": "learn-lag-depth",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-cuttings-mixture",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-m5",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-m2",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-gas-baseline",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-m3",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-m4",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-w2",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "welllog-ai",
+      "scenarios": 4,
+      "passed": true
+    },
+    {
+      "id": "learn-fluid",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-w3",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-nmr",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-shale",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-w5",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-w1",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-avo",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-s4",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "firstbreak-ai",
+      "scenarios": 4,
+      "passed": true
+    },
+    {
+      "id": "learn-horizon-track",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-s1",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-s2",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-s5",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-velocity",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-t5",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-compressor",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-station-balance",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-t4",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-pig-condition",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "transport-ai",
+      "scenarios": 4,
+      "passed": true
+    },
+    {
+      "id": "scene-t2",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-t3",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "production-ai",
+      "scenarios": 4,
+      "passed": true
+    },
+    {
+      "id": "learn-watercut",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-pr1",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-pump-energy",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-pr3",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-gaslift",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-pr4",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-pr5",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-d2",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-hole-cleaning",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-d3",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-mse",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-d5",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "scene-d4",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "learn-torsion",
+      "scenarios": 5,
+      "passed": true
+    },
+    {
+      "id": "drilling-ai",
+      "scenarios": 4,
+      "passed": true
+    }
+  ],
+  "errors": []
+}

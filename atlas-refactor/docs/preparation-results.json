@@ -1,0 +1,54 @@
+{
+  "base": "http://127.0.0.1:4173/",
+  "results": [
+    {
+      "test": "mouse-keyboard-and-preferences",
+      "passed": true
+    },
+    {
+      "test": "clear-and-dataset-links",
+      "passed": true
+    },
+    {
+      "test": "readable-responsive",
+      "language": "en",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "test": "readable-responsive",
+      "language": "en",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "test": "readable-responsive",
+      "language": "en",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "test": "readable-responsive",
+      "language": "zh",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "test": "readable-responsive",
+      "language": "zh",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "test": "readable-responsive",
+      "language": "zh",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "test": "view-lifetime-and-legacy-demo",
+      "passed": true
+    }
+  ],
+  "errors": []
+}
