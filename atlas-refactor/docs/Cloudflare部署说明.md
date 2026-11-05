@@ -4,7 +4,7 @@
 
 网站使用 Svelte / TypeScript / Vite，需要先构建。唯一发布目录是 **`atlas-refactor/dist/`**；仓库根目录、`atlas-refactor/` 和 `atlas-refactor/src/` 都不是生产发布目录。
 
-仓库根目录的 `wrangler.jsonc` 已指定 `assets.directory = "./atlas-refactor/dist"`。`dist/` 在 Git 中被忽略，属于正常做法，由 Cloudflare 构建时生成。
+仓库根目录的 `wrangler.jsonc` 已指定 `assets.directory = "./atlas-refactor/dist"`，并增加发布前构建步骤 `build.command = "npm run build"`。`dist/` 在 Git 中被忽略，属于正常做法，由部署过程生成。
 
 ## GitHub 连接 Workers Builds 的推荐设置
 
@@ -15,11 +15,13 @@
 | 仓库 | `qingfeng3374-lab/petroleum-exploration` |
 | 生产分支 | `main` |
 | 根目录 / Root directory | 仓库根目录，留空；不要填 `atlas-refactor` 或 `src` |
-| 构建命令 / Build command | `npm run build` |
-| 部署命令 / Deploy command | `npx wrangler deploy --config wrangler.jsonc` |
+| 构建命令 / Build command | 可留空，由发布前步骤构建 |
+| 部署命令 / Deploy command | `npm run deploy`；也兼容默认 `npx wrangler deploy` |
 | 构建变量 `NODE_VERSION` | `24` |
 
-安装阶段在根目录执行 `npm ci`，安装锁定的 Wrangler；构建命令会安装网站目录依赖、生成案例、执行 Vite 生产构建并检查产物。Workers Builds 默认会检测根目录的 `package-lock.json`；若关闭了自动依赖安装，改用构建命令 `npm ci && npm run build`。
+安装阶段在根目录执行 `npm ci`，安装锁定的 Wrangler。发布时 Wrangler 自动运行 `npm run build`，安装网站目录依赖、生成案例、执行 Vite 生产构建并检查产物，再读取发布目录。Workers Builds 默认会检测根目录的 `package-lock.json`；若关闭了自动依赖安装，请设置构建命令为 `npm ci`。只执行安装不会生成网站，构建由发布前步骤完成。
+
+如果控制台仍保留独立构建命令 `npm run build` 也可正常部署，但随后 Wrangler 会再次构建；推荐按上表留空，避免重复。若控制台或自定义包装工具主动禁用了 Wrangler 构建，请改用显式部署命令 `npm run build && npx wrangler deploy`。
 
 **删除部署命令中旧的 `--assets .`、`--assets ./atlas-refactor` 等参数。**CLI 的错误目录参数会覆盖配置文件，继续把源码发布出去。使用上表命令即可。
 
@@ -31,7 +33,15 @@ vite ... building ... for production...
 Deployment check passed: compiled JS/CSS, legacy resources and 102 case packages are present in dist/.
 ```
 
-注意：Workers Builds 的构建命令需要在控制台显式填写；不能只写 Wrangler 的自定义 `build.command` 后省略控制台构建步骤。
+此次已在锁定的 Wrangler 4.157.0 下验证直接部署路径，包含 `WORKERS_CI=1` 环境。`npx wrangler deploy` 的日志会先出现 `[custom build] Running: npm run build`；应先确认这一行，再检查生成案例与 Vite 构建结果。
+
+## 安装脚本警告与缺少 dist 的区别
+
+`npm warn allow-scripts` 是 npm 的安装脚本许可提示。项目已按锁定版本声明 root 的 `esbuild@0.28.2`、`workerd@1.20261103.1`，以及网站目录直接和传递依赖中的 `esbuild@0.25.12`、`esbuild@0.28.2`。更新依赖时需要一并复查这些声明。
+
+`The directory specified by assets.directory ... does not exist` 则表示网站未构建，或构建在生成产物前失败。2026-11-05 20:04 的日志在安装后直接执行了 `npx wrangler deploy`，当时缺少发布前构建步骤，因此 `/opt/buildhome/repo/atlas-refactor/dist` 不存在；本次补上该步骤，不能通过把源码目录当成 assets 来绕过错误。
+
+本次使用不含 `node_modules` 和 `dist` 的独立源代码副本验证：npm 11.21.2 安装根目录依赖后，直接执行 `npx wrangler deploy --dry-run`，在 `WORKERS_CI=1` 下自动完成构建并读取 252 个静态文件；根目录与网站目录的脚本许可待确认项均为空。类型检查零错误、零警告，84 项单元测试通过；Wrangler 本地浏览器检查通过三维首页、案例计算、主题同步、ZIP 与旧站入口，页面错误为零。这些是本地构建与运行验证，不等同于已完成 Cloudflare 生产发布。
 
 ## 本机验证与部署
 
@@ -44,7 +54,7 @@ npm run deploy:check
 npm run preview:cloudflare -- --port 8787
 ```
 
-`deploy:check` 只检查部署配置，不发布；`preview:cloudflare` 在本机模拟 Workers 静态资源服务。首页使用 `#/` 路由，不需要服务器把不存在的 JS 请求重写为首页。
+`deploy:check` 会先运行构建，再检查部署配置，不发布；`preview:cloudflare` 也会先构建，再在本机模拟 Workers 静态资源服务。首页使用 `#/` 路由，不需要服务器把不存在的 JS 请求重写为首页。上面的手动 `npm run build` 可用于单独排查构建问题；直接执行 `deploy:check` 也能从空产物目录开始。
 
 预览启动后，在另一个终端的仓库根目录执行 `npm run test:cloudflare`，检查编译入口的 MIME 类型、三维首页、案例计算、主题同步、ZIP 与经典案例。可用环境变量 `ATLAS_TEST_URL` 指定实际线上网址。截图和检查结果写入被 Git 忽略的 `.wrangler/`。
 

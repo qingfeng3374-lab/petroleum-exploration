@@ -2,6 +2,12 @@
 /.report-work/
 /.visual-work/
 /课程提交材料_*/
+# Local recordings and Word narration drafts
+/*.mp4
+/*.mov
+/*.mkv
+/*.webm
+/*.docx
 
 # Dependencies, bundler caches and build output
 node_modules/

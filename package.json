@@ -8,10 +8,14 @@
   },
   "scripts": {
     "build": "npm --prefix atlas-refactor ci --no-audit --no-fund && npm --prefix atlas-refactor run build",
-    "deploy": "npm run build && wrangler deploy --config wrangler.jsonc",
+    "deploy": "wrangler deploy --config wrangler.jsonc",
     "deploy:check": "wrangler deploy --config wrangler.jsonc --dry-run",
     "preview:cloudflare": "wrangler dev --config wrangler.jsonc --ip 127.0.0.1",
     "test:cloudflare": "node atlas-refactor/tests/cloudflare-deployment.mjs"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "workerd@1.20261103.1": true
   },
   "devDependencies": {
     "wrangler": "4.157.0"

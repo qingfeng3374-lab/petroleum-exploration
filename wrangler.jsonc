@@ -2,6 +2,13 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "petroleum-exploration",
   "compatibility_date": "2026-11-05",
+  "build": {
+    // Also build when Cloudflare runs only its default `npx wrangler deploy`.
+    "command": "npm run build",
+    "cwd": ".",
+    // Generated catalog files must not trigger a rebuild loop during local preview.
+    "watch_dir": "./atlas-refactor/src/cases"
+  },
   "assets": {
     // Publish only Vite's production output. Never use the repository or src/ here.
     "directory": "./atlas-refactor/dist",

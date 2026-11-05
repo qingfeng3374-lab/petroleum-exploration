@@ -31,7 +31,7 @@ npm run preview -- --open
 
 ## Cloudflare Workers 部署
 
-Workers Builds 使用**仓库根目录**，构建命令 `npm run build`，部署命令 `npx wrangler deploy --config wrangler.jsonc`，构建变量 `NODE_VERSION=24`。根目录构建入口会安装网站依赖并生成 `atlas-refactor/dist/`，Wrangler 仅发布该目录。不要使用 `--assets .`，也不要上传未经构建的 `atlas-refactor/`；源码入口 `/src/main.ts` 无法作为生产页面直接运行。
+Workers Builds 使用**仓库根目录**，部署命令为 `npm run deploy`，构建变量 `NODE_VERSION=24`。独立构建命令可留空：Wrangler 发布前会自动运行根目录的构建入口，安装网站依赖并生成 `atlas-refactor/dist/`，仅发布该目录。保留默认的 `npx wrangler deploy` 也会执行同一构建步骤。不要使用 `--assets .`，也不要上传未经构建的 `atlas-refactor/`；源码入口 `/src/main.ts` 无法作为生产页面直接运行。
 
 在仓库根目录可执行 `npm ci`、`npm run build`、`npm run deploy:check` 和 `npm run preview:cloudflare` 做发布前检查。完整控制台设置、手动上传方式与黑屏原因见 [Cloudflare 部署说明](atlas-refactor/docs/Cloudflare部署说明.md)。
 
