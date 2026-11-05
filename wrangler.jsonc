@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "petroleum-exploration",
+  "compatibility_date": "2026-11-05",
+  "assets": {
+    // Publish only Vite's production output. Never use the repository or src/ here.
+    "directory": "./atlas-refactor/dist",
+    // The site uses hash routes; missing scripts must remain 404 instead of HTML.
+    "not_found_handling": "none",
+    // Resolve / to index.html and preserve directory-relative legacy asset paths.
+    "html_handling": "auto-trailing-slash"
+  }
+}

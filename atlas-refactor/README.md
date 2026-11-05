@@ -15,6 +15,8 @@ npm run dev -- --open
 
 开发地址通常为 `http://127.0.0.1:5173/`。若端口已占用，以终端输出为准。Node.js 需满足 Vite 所需版本，开发使用 Node 24。`npm run dev` 会先自动生成案例 HTML、ZIP 与目录数据；`npm run build` 同样先生成案例再构建 `dist/`。部署时上传 `dist/` 到静态服务器；主站不要直接双击 `dist/index.html`。
 
+Cloudflare Workers 的 GitHub 构建使用仓库根目录的 `package.json` 与 `wrangler.jsonc`，并显式执行构建命令。不要把本目录直接作为静态资源上传，否则 `/src/main.ts` 无法运行并导致黑屏。设置步骤见 [Cloudflare部署说明](docs/Cloudflare部署说明.md)。构建结束会检查 JS/CSS、兼容脚本和全部案例包是否齐全。
+
 Git 仓库保留源码、原站兼容快照、文档与锁文件。`node_modules/`、`dist/`、`release/`、`public/cases/`、`public/case-archives/`、`public/examples/`、测试截图和本地临时材料均被忽略；案例分发文件由上述命令重建。提交的 JSON 验收记录用于保存历史检查结果，截图可通过对应浏览器脚本重新生成。仅通过底层 Vite 命令直接启动会跳过案例生成，请使用 `npm run dev`。
 
 ## 单文件与 ZIP 案例
